@@ -7,6 +7,7 @@ self.onmessage = async function (e) {
   if (typeof msg === "string") {
   try {
     const fitxers = [
+      console.log("🔗 Carregant:", url.href),
       "data/dades_part_01.csv",
       "data/dades_part_02.csv",
       "data/dades_part_03.csv",
@@ -270,6 +271,7 @@ self.onmessage = async function (e) {
 
     } catch (error) {
         self.postMessage({ error: error.message });
+        console.error("❌ Error en fitxer:", nomFitxer, error);
     }
 
   }
