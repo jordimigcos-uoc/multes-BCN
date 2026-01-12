@@ -17,6 +17,11 @@ self.onmessage = async function (e) {
       const text = await response.text();
       const data = d3.csvParse(text);
 
+      console.log("🧪 Exemple de fila:", data[0]);
+      console.log("🔍 Tipus de lat:", typeof data[0].lat, "→", data[0].lat);
+      console.log("🔍 Tipus de lon:", typeof data[0].lon, "→", data[0].lon);
+
+
       // Preprocessar: afegir camp "Minuts" i convertir coordenades
       data.forEach(d => {
         if (d.franja_hora && d.franja_hora.includes(":")) {
@@ -26,8 +31,9 @@ self.onmessage = async function (e) {
           d.Minuts = null;
         }
 
-        d.Lat = +d.lat || +d.Lat || null;
-        d.Lon = +d.lon || +d.Lon || null;
+        d.Lat = d.lat !== undefined ? +d.lat : (d.Lat !== undefined ? +d.Lat : null);
+        d.Lon = d.lon !== undefined ? +d.lon : (d.Lon !== undefined ? +d.Lon : null);
+
       });
 
       // RadialChart
