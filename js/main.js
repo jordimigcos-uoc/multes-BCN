@@ -170,6 +170,13 @@ worker.addEventListener("message", e => {
     //console.error("❌ Error del worker:", data.error);
     document.getElementById("loading-message").textContent = "❌ Error en carregar les dades.";
     document.getElementById("loading-message").textContent = "❌ Error en carregar les dades: " + data.error;
+
+    // 🔍 AFEGEIX AQUESTS LOGS AQUÍ 
+    console.log("📊 Dades rebudes del worker:", data); 
+    console.log("📈 Radial:", data.radialData?.length); 
+    console.log("📉 Line:", data.lineData?.length); 
+    console.log("📊 Stream:", data.streamData?.length); 
+    console.log("🔥 Heatmap:", data.heatmapData?.length);
   }
 });
 
