@@ -5,10 +5,28 @@ self.onmessage = async function (e) {
   const msg = e.data;
 
   if (typeof msg === "string") {
-    try {
-      const response = await fetch(msg);
+  try {
+    const fitxers = [
+      "data/dades_part_01.csv",
+      "data/dades_part_02.csv",
+      "data/dades_part_03.csv",
+      "data/dades_part_04.csv",
+      "data/dades_part_05.csv",
+      "data/dades_part_06.csv"
+    ];
+
+    const data = [];
+
+    for (const nomFitxer of fitxers) {
+      const url = new URL(nomFitxer, self.location.origin + "/multes-BCN/");
+      const response = await fetch(url);
       const text = await response.text();
-      const data = d3.csvParse(text);
+      const parcial = d3.csvParse(text);
+      data.push(...parcial);
+    }
+
+    console.log("📊 Total de files carregades:", data.length);
+
 
       // Preprocessar: afegir camp "Minuts" i convertir coordenades
       data.forEach(d => {
