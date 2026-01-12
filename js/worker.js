@@ -3,7 +3,6 @@ self.importScripts("https://d3js.org/d3.v7.min.js");
 
 self.onmessage = async function (e) {
   const msg = e.data;
-  console.log("📥 Worker ha rebut:", msg);
 
   if (typeof msg === "string") {
     try {
