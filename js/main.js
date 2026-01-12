@@ -169,6 +169,7 @@ worker.addEventListener("message", e => {
   if (data.error) {
     //console.error("❌ Error del worker:", data.error);
     document.getElementById("loading-message").textContent = "❌ Error en carregar les dades.";
+    document.getElementById("loading-message").textContent = "❌ Error en carregar les dades: " + data.error;
   }
 });
 
