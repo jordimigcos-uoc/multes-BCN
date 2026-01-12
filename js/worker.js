@@ -20,7 +20,14 @@ self.onmessage = async function (e) {
 
       // Preprocessar: afegir camp "Minuts" i convertir coordenades
       data.forEach(d => {
-        const [h, m] = d.franja_hora.split(":").map(Number);
+        //const [h, m] = d.franja_hora.split(":").map(Number);
+        if (d.franja_hora && d.franja_hora.includes(":")) {
+          const [h, m] = d.franja_hora.split(":").map(Number);
+          d.Minuts = h * 60 + m;
+        } else {
+          d.Minuts = null;
+        }
+
         d.Minuts = h * 60 + m;
         d.Lat = +d.lat || +d.Lat || null;
         d.Lon = +d.lon || +d.Lon || null;
