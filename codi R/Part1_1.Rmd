@@ -1,0 +1,335 @@
+---
+title: "Part II: projecte de visualització"
+author: "Jordi Miguel i Costal"
+date: "13/01/2026"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    toc_depth: 3
+    number_sections: true
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Carrega de paquets
+```{r paquets}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lubridate)
+library(hms)
+```
+
+```{r rutes}
+ruta_data <- file.path("..", "data")
+ruta_denuncies <- file.path("..", "data", "denuncies")
+ruta_conceptes <- file.path("..", "data", "conceptes")
+ruta_codis <- file.path("..", "data", "codis")
+ruta_vehicle <- file.path("..", "data", "vehicle")
+ruta_output <- file.path("..", "output")
+```
+
+# Unió i neteja de dades
+
+## Informació de denúncies
+
+```{r denuncies}
+fitxers <- list.files(path = ruta_denuncies, pattern = "\\.csv$", full.names = TRUE)
+print(fitxers)
+```
+
+Llegeim tots els CSV i els unim
+
+```{r}
+df_denuncies <- do.call(rbind, lapply(fitxers, read.csv))
+```
+
+```{r}
+names(df_denuncies)
+
+```
+Eliminem columnes que no necessitarem
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  select(
+    -Tipus_Via,
+    -Desc_Tipus_Via,
+    -Codi_Carrer,
+    -Nom_Carrer,
+    -Num_Carrer,
+    -X_ETRS89,
+    -Y_ETRS89,
+    -Codi_Barri,
+    -Nom_Barri,
+    -Seccio_Censal,
+    -Grua,
+    -Codi_Districte
+  )
+```
+
+Eliminem valors nuls o 0
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  filter(
+    # Hora_Infraccio no pot ser NA
+    !is.na(Hora_Infraccio),
+    
+    # Longitud i Latitud no poden ser NA ni 0
+    !is.na(Longitud_WGS84),
+    !is.na(Latitud_WGS84),
+    Longitud_WGS84 != 0,
+    Latitud_WGS84 != 0,
+
+    # MITJA_IMPOSICIO no pot ser NA ni buit ni 0
+    !is.na(MITJA_IMPOSICIO),
+    MITJA_IMPOSICIO != "",
+    MITJA_IMPOSICIO != "0",
+
+    # Tipus_Vehicle_Codi no pot ser NA ni buit ni 0
+    !is.na(Tipus_Vehicle_Codi),
+    Tipus_Vehicle_Codi != "",
+    Tipus_Vehicle_Codi != "0"
+  )
+```
+
+Trasnformem la columna Hora_Infraccio pero obtenir format hh:mm:ss
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  mutate(
+    Hora_Infraccio_raw = Hora_Infraccio,  # guardem original
+    Hora_Infraccio = str_pad(Hora_Infraccio, 6, pad = "0"),
+    Hora_Infraccio = hms::as_hms(
+      paste0(
+        substr(Hora_Infraccio, 1, 2), ":",
+        substr(Hora_Infraccio, 3, 4), ":",
+        substr(Hora_Infraccio, 5, 6)
+      )
+    )
+  ) %>%
+  filter(
+    !is.na(Hora_Infraccio),
+    Hora_Infraccio != hms::as_hms("00:00:00")
+  )
+```
+
+Canviem nom columnes
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  rename(
+    lon = Longitud_WGS84,
+    lat = Latitud_WGS84
+  )
+```
+
+## Informació de la codificació oficial de les denúncies i sancions
+
+```{r codis}
+fitxers_codis <- list.files(path = ruta_codis, pattern = "\\.csv$", full.names = TRUE)
+print(fitxers_codis)
+```
+
+Llegeim tots els CSV i els unim i eliminem valors duplicats
+
+```{r}
+df_codis <- do.call(rbind, lapply(fitxers_codis, read.csv))
+
+df_codis <- df_codis %>%
+  distinct(Infraccio_Codi, .keep_all = TRUE)
+```
+
+```{r}
+names(df_codis)
+dim (df_codis)
+```
+
+## Informació del Tipyus de vehicle
+
+```{r vehicle}
+fitxers_vehicle <- list.files(path = ruta_vehicle, pattern = "\\.csv$", full.names = TRUE)
+print(fitxers_vehicle)
+```
+
+Llegeim tots els CSV i els unim i eliminem valors duplicats
+
+```{r}
+df_vehicle <- do.call(rbind, lapply(fitxers_vehicle, read.csv))
+
+df_vehicle <- df_vehicle %>%
+  distinct(Tipus_Vehicle_Codi, .keep_all = TRUE)
+```
+
+```{r}
+names(df_vehicle)
+dim (df_vehicle)
+```
+# Enriquim el dataset
+
+Afegim una columna amb el dia de la setmana i un altre amb el mes
+
+```{r}
+# Forcem que sigui en català
+Sys.setlocale("LC_TIME", "Catalan")
+
+
+# Convertim Data_infraccio a Date
+df_denuncies <- df_denuncies %>%
+  mutate(
+    Data_Infraccio = as.Date(Data_Infraccio)
+  )
+
+# Afegim dia de la setmana i mes
+df_denuncies <- df_denuncies %>%
+  mutate(
+    dia_setmana = weekdays(Data_Infraccio, abbreviate = FALSE),
+    mes = months(Data_Infraccio, abbreviate = FALSE)
+  )
+```
+
+Afegim columna amb la frnaja horària de 60 minuts
+
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  mutate(
+    # Convertim l'hora (hms) a POSIXct amb una data fictícia
+    hora_posix = as.POSIXct(Hora_Infraccio, origin = "1970-01-01"),
+    
+    # Apliquem la franja de 60 minuts
+    franja_hora  = floor_date(hora_posix, "60 minutes"),
+    
+    # Ens quedem només amb l'hora (sense data)
+    franja_hora = format(franja_hora, "%H:%M")
+  ) %>%
+  select(-hora_posix)   # Eliminem la columna auxiliar
+
+# Ordenem per franges horaries
+df_denuncies <- df_denuncies %>%
+  mutate(
+    franja_hora = factor(
+      franja_hora,
+      levels = format(
+        seq(
+          from = as.POSIXct("00:00", format="%H:%M"),
+          to   = as.POSIXct("23:45", format="%H:%M"),
+          by   = "60 min"
+        ),
+        "%H:%M"
+      )
+    )
+  )
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+# Classificació de vehicles
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  mutate(
+    Grup_Vehicle = case_when(
+      Tipus_Vehicle_Codi %in% c("B", "BA", "BI", "BT", "VT") ~ "Bicicletes",
+      Tipus_Vehicle_Codi %in% c("AM") ~ "Equips emergencia",
+      Tipus_Vehicle_Codi %in% c("VV") ~ "Habitatge",
+      Tipus_Vehicle_Codi %in% c("CC", "CM", "CP", "M",
+                            "MC", "TL", "VL")
+                            ~ "Motocicleta",
+      Tipus_Vehicle_Codi %in% c("MP", "MS","PT") ~ "Patinet",
+      Tipus_Vehicle_Codi %in% c("TA") ~ "Taxis",
+      Tipus_Vehicle_Codi %in% c("CL", "CT","F", "RI") ~ "Transport Comercial",
+      Tipus_Vehicle_Codi %in% c("A", "AB", "AC", "AT", "MB") ~ "Transport públic",
+      Tipus_Vehicle_Codi %in% c("MT", "QC", "R", "RT", "T", "TM",
+                            "TT", "TU", "TY", "VM", "VP", "XL", "Y")
+                            ~ "Vehicle Turisme",
+      Tipus_Vehicle_Codi %in% c("G", "GI", "PC", "TR", "VE") ~ "Vehicles especials",
+      Tipus_Vehicle_Codi %in% c("C", "VI") ~ "Vianants",
+    )
+  )
+
+
+df_denuncies <- df_denuncies %>%
+  filter(
+    !is.na(Grup_Vehicle),           
+    Grup_Vehicle != ""
+  )
+
+```
+
+
+```{r}
+# Total de multes
+total_multes <- nrow(df_denuncies)
+
+# Import total de totes les multes
+import_total <- sum(df_denuncies$Import_Nominal_., na.rm = TRUE)
+
+total_multes
+import_total
+
+
+```
+# Qui posa la multa
+
+```{r}
+df_denuncies <- df_denuncies %>%
+  mutate(
+    Agent = case_when(
+      MITJA_IMPOSICIO %in% c("MOS") ~ "Mossos",
+      MITJA_IMPOSICIO %in% c("MTO") ~ "Radar",
+      MITJA_IMPOSICIO %in% c("PGU", "BSM", "AGU") ~ "Guardia Urbana",
+      MITJA_IMPOSICIO %in% c("CC") ~ "Papereta",
+    )
+  )
+
+
+df_denuncies <- df_denuncies %>%
+  filter(
+    !is.na(Agent),           
+    Agent != ""
+  )
+
+df_denuncies
+```
+
+```{r}
+unique(df_denuncies$Agent)
+table(df_denuncies$Agent)
+
+```
+```{r}
+df_denuncies <- df_denuncies[df_denuncies$Agent != "Mossos", ]
+```
+
+
+```{r output}
+write.csv(df_denuncies,
+          file = file.path(ruta_output, "dades_final.csv"), 
+          row.names = FALSE,
+          quote = FALSE
+          )
+
+df_denuncies
+```
+
+
