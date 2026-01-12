@@ -12,7 +12,9 @@ self.onmessage = async function (e) {
 
   if (typeof msg === "string") {
     try {
-      const response = await fetch(msg);
+//      const response = await fetch(msg);
+      const response = await fetch(new URL(msg, self.location.origin + "/multes-BCN/"));
+
       const text = await response.text();
       const data = d3.csvParse(text);
 
