@@ -9,3 +9,6 @@ Storytelling sobre les cancel·lacins de reserves hoteleres a la ciutat de Lisbo
 Executant index.html s'accedeix a l'storytelling. 
 
 A la carpeta Codi R hi ha el codi utilitzat per treballar amb les dades.
+
+Per accedir ala visualització del html es pot utilitzar el segëunt enllaç:
+https://jordimigcos-uoc.github.io/multes-BCN/
