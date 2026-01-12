@@ -113,6 +113,10 @@ export function updateMapaHora(hora) {
     }
     punts = agentMap.get(currentAgent) || [];
   }
+  const puntsValids = punts.filter(([lat, lon]) => !isNaN(lat) && !isNaN(lon));
+  if (punts.length !== puntsValids.length) { 
+    console.warn(`⚠️ ${punts.length - puntsValids.length} coordenades descartades per NaN a l'hora ${h}`); 
+  }
 
   heatLayer.setLatLngs(punts);
 }
