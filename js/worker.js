@@ -90,8 +90,12 @@ self.onmessage = async function (e) {
         vehicles.forEach(([vehicle, coords]) => {
           const ordenat = coords
             .map(([coord, count]) => {
-              const [lat, lon] = coord.split(",").map(Number);
-              return { lat, lon, count };
+              if (typeof coord === "string" && coord.includes(",")) {
+                const [lat, lon] = coord.split(",").map(Number);
+                return { lat, lon, count };
+              } else { 
+                return { lat: null, lon: null, count }; 
+              }
             })
             .sort((a, b) => b.count - a.count);
 
