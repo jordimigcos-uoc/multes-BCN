@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Un dia de multes a Barcelona</title>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js" defer></script>
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+  <style>
+    #loading-message {
+      font-size: 1.2em;
+      text-align: center;
+      padding: 2em;
+      animation: fade 1.5s infinite alternate;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .inline-selectors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+      margin-top: 1rem;
+    }
+
+    .inline-selectors > div {
+      display: none;
+    }
+
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-message">🔄 Carregant dades, si us plau espera...</div>
+
+  <div id="app" style="display: none;">
+    <div id="tooltip"></div>
+
+    <main class="viz-container">
+      <h1>Multes per Districte i Franja Horària</h1>
+
+      <div class="text">
+        <p>Durant el període 2022-2024 L’Ajuntament de Barcelona va posar un total de 
+          <b>2.809.135 sancions per un import total de 306.944.208 €</b>, 
+          gairebé un 3% del total del pressupost de l’Ajuntament per aquest mateix període. 
+          Es un volum de multes molt elevat, per posar-ho en context, 
+          la població de ciutat el 2024 era de 1.702.814 habitants.</p>        
+        <p>Barcelona és una de les ciutats més dinàmiques d’Europa i aquest dinamisme segurament 
+          té afectació amb les sancions que es posen.</p>
+        <p>Analitzem <b>com es un dia normal a la ciutat de Barcelona</b> pel que fa a l’activitat 
+          sancionadora.</p>
+        <p>La ciutat no dorm i tenim sancions a totes hores, però evidentment 
+          les hores puntes escolars i laborals son les que surten guanyant. 
+          De 9:00h a 11:00h del matí, al migdia i a les 16:00h es quan més multes tenim. 
+          També son les hores que hi ha més moviment. </p>
+      </div>
+
+      <section id="radial-container"></section>
+
+      <div class="text">
+        <p>Però evidentment la ciutat de Barcelona és molt gran i segurament té un comportament 
+          diferent en funció del <b>districte</b>.</p> 
+        <p>Com podem veure sí que hi ha diferencies significatives entre districtes 
+          i a més en funció de les hores del dia també hi ha canvis significatius. 
+          A les hores nocturnes Nou Barris i Ciutat Vella concentren gran part de les sancions. 
+          A mida que el matí avança l’Eixample i Sarrià-Sant Gervasi van agafant protagonisme. P
+          er la banda baixa, Gràcia Sant Andreu i Horta-Guinardó es mantenen bastant estables.</p>
+      </div>
+
+      <div id="race-chart"></div>
+
+      <div class="text">
+        <p>Hi ha molts tipus de sancions, <b>però com evolucionen amb el dia</b>, 
+          n’hi ha algunes que son més representatives que altres?</p> 
+        <p>Podem veure que el percentatge de cada tipus es manté bastant estable al llarg del dia.</p>
+      </div>
+      
+      <div id="streamgraph"></div>
+   
+      <div class="text">
+        <p>Hem creat una comparativa d’evolució de sancions per hora i tipus de vehicle, 
+          ara no ens interessa tant el districte.</p>
+        <p>Analitzant aquestes gràfiques podem veure alguns patrons que ens criden l’atenció. 
+          Per exemple, les <b>bicicletes</b> tenen un pic de sancions a prop de mitjanit. 
+          Un dels motius podria ser que es el mitjà de transport escollit 
+          pels joves per sortir de gresca.</p>
+        <p>Una altre dada curiosa, les sancions per <b>habitatges</b> tenen un pic al final de tarda, 
+          podria ser degut a l’arribada de turistes i es troben amb problemes alhora 
+          de fer el check-in en els apartaments contractats.</p>
+        <p>La resta de tipus de vehicle segueixen un comportament força alineat al 
+          ritme de vida d’una ciutat com Barcelona.</p>
+      </div>
+
+      <div id="LineChartGrid"></div>
+
+      <div class="text">
+        <p><b>Com es distribueixen aquestes sancions sobre el mapa de Barcelona?</b></p>
+        <p>Degut a la quantitat enorme de punts i per no saturar la visualització, 
+          hem representat només <i>aquelles coordenades que agrupen el 50% superior 
+          del total de sancions</i>.</p>
+        <p>Com en totes les grans ciutats hi ha punts calents a on hi ha més conflictivitat 
+          o més afluència de persones. Si mirem la distribució geogràfica dels principals punts 
+          calents podem veure com a les franges nocturnes es concentren en les vies d’accés, 
+          sobretot rondes i Diagonal.</p>
+        <p>De la matinada fins a les 9:00h del matí es concentren en les primeres vies de circulació
+           de la ciutat. A partir de les 9:00h el centre de la ciutat es desperta del tot 
+           i ja no hi ha zones que es destaquin per sobre d’altres.</p>
+        <p>De les 11:00h a les 12:00h tornem a tenir una concentració en les vies circulatòries. 
+          Al migdia la taca es torna a estendre per tot el centre i torna a concentrar-se 
+          a la mobilitat fins de 16:00h a 18:00h. Coincideix amb les hores d’entrada i sortida 
+          de feina i d’escoles, son hores amb molta mobilitat i conseqüentment amb molta activitat 
+          sancionadora.</p>
+        <p>Si ho analitzem per tipus de vehicles, tornem a veure com a les nits tenim una 
+          concentració elevada de sancions per les bicicletes i que estan concentrades a 
+          la zona central de la Diagonal, el Paral·lel, la Rambla, la zona centre i el Poble Nou. 
+          Durant el dia aquestes sancions es repeteixen més per la ciutat, però la zona del 
+          Paral·lel i el carrer de Sants continuen monopolitzant les sancions durant tot el dia.</p> 
+        <p>Una altre gràfic interessant es el del Transport Comercial. Com ens podíem esperar 
+          la màxima concentració de sancions es troba en les hores centrals del dia, 
+          però el que ens pot cridar l’atenció es que les sancions son dins de la ciutat i 
+          no tant a les vies d’accés. Podríem profunditzar més en el anàlisis per veure 
+          si son més multes d’estacionament o d’infraccions viaries en moviment.</p>
+        <p>Pel que fa a les sancions a Transport públic hi ha una concentració bastant evident 
+          durant tot el dia a la zona de Glòries. Es una zona a on hi ha forces estacionament 
+          d’autocars, aquesta podria ser un dels motius.</p>
+        <p>També ens crida l’atenció la distribució de sancions a vianants. Veiem una gran 
+          concentració de sancions, en gairebé totes les franges horàries a la zona de la 
+          Zona Franca.</p>
+        <p>En la gràfica de Patinet, també veiem que no hi ha gaires sancions, per no dir 
+          que gairebé son inexistents. Hem de recordar que les dades son del període 2022-2024, 
+          en aquell període els patinets encara no tenien una normativa especifica i 
+          les multes eren molt residuals.</p>
+        <p>Si ara seleccionem per la classificació de qui posa la sanció, entre les dues opcions 
+          que tenim de Radar o Guardia Urbana, podem veure un comportament bastant normal 
+          i alineat amb la quantitat de sancions. No detectem cap patró que ens permeti 
+          detectar diferencies</p> 
+      </div>
+
+      <label for="map-mode">Mode de mapa:</label>
+      <select id="map-mode">
+        <option value="total">Multes totals</option>
+        <option value="vehicle">Per tipus de vehicle</option>
+        <option value="agent">Qui posa la sanció?</option>
+      </select>
+
+      
+
+      <label for="vehicle-filter" id="vehicle-filter-label" style="display:none;">Tipus de vehicle:</label>
+      <select id="vehicle-filter" style="display:none;"></select>
+
+      <label for="agent-filter" id="agent-filter-label" style="display:none;">Tipus d’agent:</label>
+      <select id="agent-filter" style="display:none;"></select>
+
+      <div id="mapa" style="height: 600px;"></div>
+
+      <section id="time-control">
+        <div id="clock-time">00:00</div>
+        <input type="range" id="time-slider" min="0" max="86400" step="60" />
+        <div id="time-progress"></div>
+        <div id="time-dot"></div>
+
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+
+        <label for="speed">Velocitat:</label>
+        <select id="speed">
+          <option value="1">1x</option>
+          <option value="5">5x</option>
+          <option value="20">20x</option>
+        </select>
+      </section>
+
+      <div class="text">
+        <p>Fins ara ens hem centrat en analitzar les 24 hores, sense tenir en compte res més, 
+          però, es comporten igual les multes tots els dies de la setmana?</p>
+        <p>>En el següent gràfic podem veure la distribució de multes per hora i per dia 
+          de la setmana. Si ens centrem en el total de multes podem veure con de dilluns a divendres 
+          si que es manté el patró que hem descrit fins ara, però com era d’espera la quantitat 
+          de sancions cau dràsticament els caps de setmana. Encara que en baixa escala, 
+          si que podem detectar que l’hora punta de sancions matinals dels dissabtes es 
+          retarda una hora i que els diumenges sembla ser una ciutat més de tardes que de matins.</p>
+        <p>Si ho analitzem per tipus de vehicle les bicicletes ens tornen a sorprendre. 
+          Sembla que les mitjanits de dimecres, dijous i divendres hi ha força activitat ciclista 
+          a la ciutat, pot coincidir en els dies que la quantitat universitària de la 
+          ciutat aprofita per socialitzar. També es sorprenent la concentració de sancions 
+          els dimarts i dimecres a la franja de 16:00h a 17:00h.</p>
+        <p>Els equips d’emergència no segueixen cap patró clar, igual que les emergències 
+          que mai sabem quan podem ocórrer.</p>
+        <p>La distribució de sancions d’habitatge veiem una concentració elevada els divendres 
+          a la tarda, fet que ens podria confirmar que moltes d’aquestes sancions estan 
+          relacionades a habitatges turístics ja es una franja de moltes arribades.</p>
+        <p>Pel que fa a la resta de tipus de vehicle podem veure uns patrons força estàndards 
+          i alineats amb el que s’esperava.</p>
+        <p>I si ho mirem per qui posa la sanció podem veure un patró repetitiu molt clar 
+          amb els radars i coincideixen amb les hores de més transit a la ciutat. 
+          La Guardiana Urbana també segueix un patró força repetitiu però en aquest cas 
+          no hi ha tanta diferència entre els dies entre setmana i cap de setmana. 
+          En aquesta selecció guanya pes la teoria de què els barcelonins el diumenge al 
+          matí prefereixen o estar fora de ciutat o quedar-se a casa.</p> 
+ 
+      </div>
+
+      <label for="custom-total">Total de multes:</label>
+      <select id="custom-total">
+        <option value="totes">Multes totals</option>
+        <option value="mes50">Per Tipus de Vehicle</option>
+        <option value="mes100">Qui posa la sanció?</option>
+      </select>
+
+      <label for="custom-vehicle" id="custom-vehicle-label" style="display: none;">Tipus de vehicle:</label>
+      <select id="custom-vehicle" style="display: none;"></select>
+
+      <label for="custom-origen" id="custom-origen-label" style="display: none;">Origen:</label>
+      <select id="custom-origen" style="display: none;"></select>
+      
+      <div id="heatmap-week"></div>
+
+      <h1>Com es mou Barcelona a través de les sancions</h1>
+
+      <div class="text">
+        <p>Entre 2022 i 2024, Barcelona va registrar més de <b>2,8 milions de sancions</b>, 
+          per un import total de <b>306,9 milions d’euros</b>. Una xifra que equival gairebé el 
+          <b>3% del pressupost municipal</b> i que reflecteix la intensitat de la mobilitat 
+          d’una ciutat  amb més d’1,7 milions d’habitants. Aquest volum no és només un número: 
+          és una finestra per entendre com respira Barcelona.</p>
+        <p><b>Un dia qualsevol a la ciutat</b></p>
+        <p>La ciutat no dorm, i les sancions tampoc. Tot i així, hi ha moments en què el 
+          ritme s’accelera clarament: <b>de 9 a 11 del matí, al migdia i a les 16 h</b>. 
+          Són les hores de més moviment, quan escoles i feines marquen el compàs de la mobilitat.</p>
+        <p><b>Cada districte té el seu propi ritme</b></p>
+        <p>Barcelona és diversa, i això es nota en la distribució de les sancions. Durant la nit, 
+          <b>Nou Barris</b> i <b>Ciutat Vella</b> concentren bona part de l’activitat sancionadora. 
+          A mesura que avança el matí, el protagonisme es desplaça cap a l’<b>Eixample</b> i 
+          <b>Sarrià–Sant Gervasi</b>. Altres districtes, com <b>Gràcia</b>, <b>Sant Andreu</b> 
+          o <b>Horta-Guinardó</b>, mantenen un comportament més estable al llarg del dia.</p>
+        <p><b>Tipus de vehicle: patrons i excepcions</b></p>
+        <p>La majoria de vehicles segueixen un patró previsible, però hi ha casos que destaquen:
+          <ul class="custom-guions">
+            <li><b>Bicicletes</b>: presenten un pic de sancions a mitjanit, possiblement 
+              vinculat a l’oci nocturn juvenil.</li>
+            <li><b>Habitatges</b>: les sancions augmenten a última hora de la tarda, coincidint 
+              amb l’arribada de turistes i els check-ins.
+            <li><b>Transport comercial</b>: concentra sancions al centre en hores punta.
+            <li><b>Transport públic</b>: destaca especialment a la zona de <b>Glòries</b>.
+            <li><b>Patinets</b>: pràcticament inexistents en aquest període, abans de la 
+              regulació específica.
+          </ul>
+        </p>
+        <p><b>El mapa de les sancions: una ciutat en moviment constant</b></p>
+        <p>Per evitar saturació visual, només s’han representat els punts que acumulen el 
+          50% superior de sancions. A partir d’aquí, emergeixen patrons molt clars:
+          <ul class="custom-guions">
+            <li><b>Nits</b>: concentració a les vies d’accés (Rondes, Diagonal).
+            <li><b>Matinada–9 h</b>: activitat a les primeres vies de circulació.
+            <li><b>A partir de les 9 h</b>: el centre es desperta i la distribució s’homogeneïtza.
+            <li><b>11–12 h i 16–18 h</b>: tornen a destacar les vies principals, coincidint amb els pics de mobilitat.
+          </ul>
+        <p>Cada franja horària dibuixa una Barcelona diferent.</p>
+        </p>
+        <p><b>El cap de setmana trenca el patró</b></p>
+        <p>
+          De dilluns a divendres, el ritme és estable. Però quan arriba el cap de setmana, 
+          la ciutat canvia:
+          <ul class="custom-guions">
+            <li><b>Dissabte</b>: el pic matinal es retarda.
+            <li><b>Diumenge</b>: l’activitat es concentra més a la tarda.
+          </ul>
+          <p>Les bicicletes tornen a sorprendre: molta activitat nocturna entre setmana i 
+            pics puntuals a mitja tarda. Les sancions d’habitatge es concentren els divendres 
+            a la tarda, reforçant la relació amb l’arribada de turistes.</p>
+        </p>
+        <p><b>Qui posa les sancions?</b></p>
+        <p>Els <b>radars</b> segueixen patrons molt repetitius i alineats amb les hores de més 
+          trànsit. La <b>Guàrdia Urbana</b> manté un ritme més estable, amb menys diferències 
+          entre setmana i cap de setmana. Tot plegat reforça la idea que els diumenges al matí 
+          la ciutat es mou poc: molts barcelonins opten per quedar-se a casa o sortir fora.
+        </p>
+        <p><b>Una ciutat que es pot llegir a través de les sancions</b></p>
+        <p>L’activitat sancionadora a Barcelona reflecteix fidelment el <b>pols de la ciutat</b>: 
+          mobilitat intensa, diferències territorials marcades, influència del turisme i 
+          patrons nocturns diferenciats. Els comportaments varien segons l’hora, el dia, 
+          el districte i el tipus de vehicle, però en conjunt dibuixen una ciutat <b>dinàmica, 
+          diversa i amb fluxos molt previsibles</b>.</p> 
+ 
+      </div>
+     
+    </main>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
