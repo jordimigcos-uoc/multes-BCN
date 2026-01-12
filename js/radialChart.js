@@ -23,12 +23,12 @@ export function RadialBarChart(containerSelector, data) {
     .attr("transform", `translate(${width / 2},${height / 2})`);
 
   const x = d3.scaleBand()
-    .domain(data.map(d => d.franja))
+    .domain(data.map(d => d.Hora))
     .range([0, 2 * Math.PI])
     .align(0);
 
   const y = d3.scaleRadial()
-    .domain([0, d3.max(data, d => d.count)])
+    .domain([0, d3.max(data, d => d.total_multes)])
     .range([innerRadius, outerRadius]);
 
   svg.append("g")
@@ -38,9 +38,9 @@ export function RadialBarChart(containerSelector, data) {
     .attr("class", "arc")
     .attr("d", d3.arc()
       .innerRadius(innerRadius)
-      .outerRadius(d => y(d.count))
-      .startAngle(d => x(d.franja))
-      .endAngle(d => x(d.franja) + x.bandwidth())
+      .outerRadius(d => y(d.total_multes))
+      .startAngle(d => x(d.Hora))
+      .endAngle(d => x(d.Hora) + x.bandwidth())
       .padAngle(0.01)
       .padRadius(innerRadius));
 
@@ -50,19 +50,24 @@ export function RadialBarChart(containerSelector, data) {
     .join("g")
     .attr("text-anchor", "middle")
     .attr("transform", d => `
-      rotate(${((x(d.franja) + x.bandwidth() / 2) * 180 / Math.PI - 90)})
+      rotate(${((x(d.Hora) + x.bandwidth() / 2) * 180 / Math.PI - 90)})
       translate(${outerRadius + 10},0)
     `)
     .append("text")
-    .text(d => d.franja)
-    .attr("transform", d => (x(d.franja) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI
+    .text(d => `${d.Hora}:00`)
+    .attr("transform", d => (x(d.Hora) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI
       ? "rotate(90)translate(0,0)"
       : "rotate(-90)translate(0,0)")
     .style("font-size", "16px")
     .attr("alignment-baseline", "middle");
+  return {
+    updateActiveHour
+  };
 }
 
 export function updateActiveHour(hourString) {
+  const hora = hourString.slice(0, 2); // extreu només "00", "01", etc.
   d3.selectAll(".arc")
-    .classed("active", d => d.franja === hourString);
+    .classed("active", d => d.Hora === hora);  
 }
+

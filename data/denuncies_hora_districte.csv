@@ -1,0 +1,241 @@
+Nom_Districte,Hora,total_multes
+Ciutat Vella,00,9155
+Eixample,00,6926
+Gràcia,00,1097
+Horta-Guinardó,00,3803
+Les Corts,00,6658
+Nou Barris,00,17454
+Sant Andreu,00,2534
+Sant Martí,00,4346
+Sants-Montjuïc,00,8212
+Sarrià-Sant Gervasi,00,6200
+Ciutat Vella,01,8151
+Eixample,01,5536
+Gràcia,01,876
+Horta-Guinardó,01,2670
+Les Corts,01,4921
+Nou Barris,01,13785
+Sant Andreu,01,1458
+Sant Martí,01,3579
+Sants-Montjuïc,01,6303
+Sarrià-Sant Gervasi,01,5120
+Ciutat Vella,02,5182
+Eixample,02,3159
+Gràcia,02,595
+Horta-Guinardó,02,1274
+Les Corts,02,2547
+Nou Barris,02,8945
+Sant Andreu,02,670
+Sant Martí,02,2131
+Sants-Montjuïc,02,4229
+Sarrià-Sant Gervasi,02,3102
+Ciutat Vella,03,4241
+Eixample,03,2772
+Gràcia,03,545
+Horta-Guinardó,03,908
+Les Corts,03,2116
+Nou Barris,03,7309
+Sant Andreu,03,790
+Sant Martí,03,1978
+Sants-Montjuïc,03,3601
+Sarrià-Sant Gervasi,03,2862
+Ciutat Vella,04,5024
+Eixample,04,2843
+Gràcia,04,700
+Horta-Guinardó,04,1243
+Les Corts,04,2098
+Nou Barris,04,9237
+Sant Andreu,04,1063
+Sant Martí,04,2231
+Sants-Montjuïc,04,4577
+Sarrià-Sant Gervasi,04,3461
+Ciutat Vella,05,3925
+Eixample,05,2015
+Gràcia,05,271
+Horta-Guinardó,05,1709
+Les Corts,05,4072
+Nou Barris,05,11524
+Sant Andreu,05,923
+Sant Martí,05,2202
+Sants-Montjuïc,05,3046
+Sarrià-Sant Gervasi,05,3108
+Ciutat Vella,06,2295
+Eixample,06,1350
+Gràcia,06,290
+Horta-Guinardó,06,1271
+Les Corts,06,4400
+Nou Barris,06,8094
+Sant Andreu,06,709
+Sant Martí,06,1636
+Sants-Montjuïc,06,2535
+Sarrià-Sant Gervasi,06,3189
+Ciutat Vella,07,4890
+Eixample,07,10087
+Gràcia,07,2725
+Horta-Guinardó,07,5762
+Les Corts,07,5875
+Nou Barris,07,13120
+Sant Andreu,07,3004
+Sant Martí,07,7198
+Sants-Montjuïc,07,7339
+Sarrià-Sant Gervasi,07,8498
+Ciutat Vella,08,8208
+Eixample,08,23526
+Gràcia,08,6605
+Horta-Guinardó,08,13897
+Les Corts,08,11696
+Nou Barris,08,17608
+Sant Andreu,08,6460
+Sant Martí,08,16314
+Sants-Montjuïc,08,14127
+Sarrià-Sant Gervasi,08,14570
+Ciutat Vella,09,11475
+Eixample,09,49299
+Gràcia,09,9995
+Horta-Guinardó,09,17235
+Les Corts,09,21913
+Nou Barris,09,20656
+Sant Andreu,09,11796
+Sant Martí,09,25682
+Sants-Montjuïc,09,19958
+Sarrià-Sant Gervasi,09,30522
+Ciutat Vella,10,12417
+Eixample,10,53564
+Gràcia,10,12670
+Horta-Guinardó,10,16341
+Les Corts,10,23325
+Nou Barris,10,20861
+Sant Andreu,10,12480
+Sant Martí,10,25634
+Sants-Montjuïc,10,19038
+Sarrià-Sant Gervasi,10,34566
+Ciutat Vella,11,13229
+Eixample,11,32436
+Gràcia,11,7758
+Horta-Guinardó,11,13052
+Les Corts,11,17535
+Nou Barris,11,18224
+Sant Andreu,11,10095
+Sant Martí,11,18863
+Sants-Montjuïc,11,16740
+Sarrià-Sant Gervasi,11,19024
+Ciutat Vella,12,17499
+Eixample,12,55387
+Gràcia,12,10809
+Horta-Guinardó,12,18354
+Les Corts,12,25567
+Nou Barris,12,20909
+Sant Andreu,12,15217
+Sant Martí,12,27275
+Sants-Montjuïc,12,21724
+Sarrià-Sant Gervasi,12,34730
+Ciutat Vella,13,12482
+Eixample,13,42444
+Gràcia,13,6850
+Horta-Guinardó,13,11558
+Les Corts,13,20219
+Nou Barris,13,16273
+Sant Andreu,13,9935
+Sant Martí,13,17498
+Sants-Montjuïc,13,13649
+Sarrià-Sant Gervasi,13,27007
+Ciutat Vella,14,10041
+Eixample,14,39329
+Gràcia,14,4892
+Horta-Guinardó,14,8731
+Les Corts,14,18806
+Nou Barris,14,14722
+Sant Andreu,14,7200
+Sant Martí,14,13698
+Sants-Montjuïc,14,11138
+Sarrià-Sant Gervasi,14,27487
+Ciutat Vella,15,12248
+Eixample,15,36625
+Gràcia,15,6867
+Horta-Guinardó,15,12781
+Les Corts,15,20382
+Nou Barris,15,20694
+Sant Andreu,15,10866
+Sant Martí,15,22687
+Sants-Montjuïc,15,15842
+Sarrià-Sant Gervasi,15,25720
+Ciutat Vella,16,15185
+Eixample,16,52670
+Gràcia,16,10998
+Horta-Guinardó,16,16208
+Les Corts,16,23433
+Nou Barris,16,21183
+Sant Andreu,16,14024
+Sant Martí,16,25723
+Sants-Montjuïc,16,20124
+Sarrià-Sant Gervasi,16,33643
+Ciutat Vella,17,13364
+Eixample,17,45784
+Gràcia,17,9446
+Horta-Guinardó,17,12419
+Les Corts,17,19695
+Nou Barris,17,16513
+Sant Andreu,17,11601
+Sant Martí,17,21335
+Sants-Montjuïc,17,16390
+Sarrià-Sant Gervasi,17,32301
+Ciutat Vella,18,9812
+Eixample,18,26404
+Gràcia,18,5196
+Horta-Guinardó,18,8934
+Les Corts,18,11961
+Nou Barris,18,12572
+Sant Andreu,18,7621
+Sant Martí,18,13428
+Sants-Montjuïc,18,12343
+Sarrià-Sant Gervasi,18,16931
+Ciutat Vella,19,10632
+Eixample,19,30710
+Gràcia,19,5184
+Horta-Guinardó,19,11146
+Les Corts,19,14851
+Nou Barris,19,14871
+Sant Andreu,19,9283
+Sant Martí,19,14906
+Sants-Montjuïc,19,15922
+Sarrià-Sant Gervasi,19,22365
+Ciutat Vella,20,8032
+Eixample,20,11225
+Gràcia,20,3029
+Horta-Guinardó,20,6217
+Les Corts,20,8621
+Nou Barris,20,10105
+Sant Andreu,20,4541
+Sant Martí,20,7211
+Sants-Montjuïc,20,9693
+Sarrià-Sant Gervasi,20,11456
+Ciutat Vella,21,4052
+Eixample,21,6910
+Gràcia,21,1784
+Horta-Guinardó,21,4567
+Les Corts,21,8337
+Nou Barris,21,12169
+Sant Andreu,21,2766
+Sant Martí,21,4164
+Sants-Montjuïc,21,5900
+Sarrià-Sant Gervasi,21,7373
+Ciutat Vella,22,4359
+Eixample,22,3279
+Gràcia,22,489
+Horta-Guinardó,22,3278
+Les Corts,22,7611
+Nou Barris,22,16227
+Sant Andreu,22,1384
+Sant Martí,22,2061
+Sants-Montjuïc,22,5099
+Sarrià-Sant Gervasi,22,5223
+Ciutat Vella,23,7332
+Eixample,23,5844
+Gràcia,23,867
+Horta-Guinardó,23,3640
+Les Corts,23,7769
+Nou Barris,23,17411
+Sant Andreu,23,2112
+Sant Martí,23,3599
+Sants-Montjuïc,23,7809
+Sarrià-Sant Gervasi,23,5851

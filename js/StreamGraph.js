@@ -1,5 +1,4 @@
 export function StreamGraph(container, data) {
-
   const containerWidth = d3.select(container).node()?.getBoundingClientRect().width || 800;
   const width = containerWidth;
   const height = 400;
@@ -10,7 +9,6 @@ export function StreamGraph(container, data) {
     .append("svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
     .attr("preserveAspectRatio", "xMidYMid meet");
-
 
   const vehicles = Array.from(d3.group(data, d => d.Grup_Vehicle).keys());
 
@@ -25,7 +23,6 @@ export function StreamGraph(container, data) {
     .domain(vehicles)
     .range(d3.schemeTableau10);
 
-  
   const stackedData = d3.stack()
     .keys(vehicles)
     .offset(d3.stackOffsetWiggle)
@@ -46,7 +43,6 @@ export function StreamGraph(container, data) {
     .y1(d => y(d[1]))
     .curve(d3.curveCatmullRom);
 
-  // Dibuixem capes
   const layers = svg.append("g")
     .selectAll("path")
     .data(stackedData)
@@ -55,68 +51,63 @@ export function StreamGraph(container, data) {
     .attr("fill", d => color(d.key))
     .attr("d", area)
     .on("mousemove", function(event, layerData) {
+      const [mouseX, mouseY] = d3.pointer(event, document.body);
+      const hour = Math.round(x.invert(mouseX));
+      const hourStr = String(hour).padStart(2, "0");
 
-        const [mouseX] = d3.pointer(event);
-        const hour = Math.round(x.invert(mouseX));
+      const rowsAtHour = data.filter(d => d.Hora === hourStr);
+      const totalHour = d3.sum(rowsAtHour, d => d.total_multes);
 
-        // 1. Filtrar totes les dades d'aquella hora
-        const rowsAtHour = data.filter(d => d.Hora === hour);
+      const sorted = rowsAtHour
+        .map(d => ({
+          vehicle: d.Grup_Vehicle,
+          value: d.total_multes,
+          pct: totalHour > 0 ? (d.total_multes / totalHour) * 100 : 0
+        }))
+        .sort((a, b) => b.pct - a.pct);
 
-        // 2. Calcular el total d'aquella hora
-        const totalHour = d3.sum(rowsAtHour, d => d.total_multes);
+      const listHTML = sorted
+        .map(d => `
+          <div>
+            <strong>${d.vehicle}</strong>: ${d.pct.toFixed(1)}%
+          </div>
+        `)
+        .join("");
 
-        // 3. Ordenar per percentatge
-        const sorted = rowsAtHour
-            .map(d => ({
-                vehicle: d.Grup_Vehicle,
-                value: d.total_multes,
-                pct: totalHour > 0 ? (d.total_multes / totalHour) * 100 : 0
-            }))
-            .sort((a, b) => b.pct - a.pct);
-
-        // 4. Generar HTML del rànquing
-        const listHTML = sorted
-            .map(d => `
-                <div>
-                    <strong>${d.vehicle}</strong>: ${d.pct.toFixed(1)}%
-                </div>
-            `)
-            .join("");
-
-        // 5. Mostrar tooltip
-        d3.select("#tooltip")
-            .style("opacity", 1)
-            .style("left", (event.pageX + 12) + "px")
-            .style("top", (event.pageY - 40) + "px")
-            .html(`
-                <div style="font-size:16px; margin-bottom:6px;">
-                    <strong>${String(hour).padStart(2, "0")}:00</strong>
-                </div>
-                ${listHTML}
-            `);
+      d3.select("#tooltip")
+        .style("opacity", 1)
+        .style("left", (mouseX + 12) + "px")
+        .style("top", (mouseY - 40) + "px")
+        .html(`
+          <div style="font-size:16px; margin-bottom:6px;">
+            <strong>${hourStr}:00</strong>
+          </div>
+          ${listHTML}
+        `);
     })
     .on("mouseleave", () => {
-        d3.select("#tooltip").style("opacity", 0);
+      d3.select("#tooltip").style("opacity", 0);
     });
 
-  // Rectangle d’hora activa
   const hourRect = svg.append("rect")
-    .attr("class", "hour-highlight")  
+    .attr("class", "hour-highlight")
     .attr("y", margin.top)
     .attr("height", height - margin.top - margin.bottom)
-    //.attr("fill", "#00000015")
+    .attr("fill", "#00000015") 
     .attr("x", x(0))
     .attr("width", x(1) - x(0))
     .style("pointer-events", "none");
 
-  hourRect.lower();     
-  layers.raise();       
+  hourRect.lower();
+  layers.raise();
 
   function updateHour(h) {
     const xStart = x(h);
     const xEnd = x(h + 1);
 
+    
     hourRect
+      .transition().duration(150)
       .attr("x", xStart)
       .attr("width", xEnd - xStart);
   }

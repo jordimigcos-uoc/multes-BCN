@@ -1,0 +1,1637 @@
+dia_setmana,hora,Grup_Vehicle,count
+0,00,Bicicletes,302
+0,00,Equips emergencia,6
+0,00,Motocicleta,824
+0,00,Taxis,25
+0,00,Transport Comercial,315
+0,00,Transport públic,8
+0,00,Vehicle Turisme,6716
+0,00,Vehicles especials,4
+0,00,Vianants,47
+0,01,Bicicletes,207
+0,01,Equips emergencia,4
+0,01,Habitatge,1
+0,01,Motocicleta,635
+0,01,Taxis,22
+0,01,Transport Comercial,226
+0,01,Transport públic,14
+0,01,Vehicle Turisme,4852
+0,01,Vehicles especials,1
+0,01,Vianants,34
+0,02,Bicicletes,87
+0,02,Motocicleta,343
+0,02,Taxis,14
+0,02,Transport Comercial,162
+0,02,Transport públic,9
+0,02,Vehicle Turisme,2772
+0,02,Vehicles especials,2
+0,02,Vianants,24
+0,03,Bicicletes,74
+0,03,Equips emergencia,4
+0,03,Habitatge,1
+0,03,Motocicleta,318
+0,03,Taxis,39
+0,03,Transport Comercial,134
+0,03,Transport públic,3
+0,03,Vehicle Turisme,2419
+0,03,Vehicles especials,1
+0,03,Vianants,29
+0,04,Bicicletes,93
+0,04,Equips emergencia,4
+0,04,Habitatge,1
+0,04,Motocicleta,381
+0,04,Taxis,46
+0,04,Transport Comercial,205
+0,04,Transport públic,17
+0,04,Vehicle Turisme,2958
+0,04,Vehicles especials,2
+0,04,Vianants,47
+0,05,Bicicletes,43
+0,05,Equips emergencia,6
+0,05,Habitatge,1
+0,05,Motocicleta,376
+0,05,Taxis,8
+0,05,Transport Comercial,274
+0,05,Transport públic,11
+0,05,Vehicle Turisme,3272
+0,05,Vehicles especials,2
+0,05,Vianants,60
+0,06,Bicicletes,13
+0,06,Equips emergencia,2
+0,06,Motocicleta,314
+0,06,Taxis,7
+0,06,Transport Comercial,307
+0,06,Transport públic,11
+0,06,Vehicle Turisme,2023
+0,06,Vianants,49
+0,07,Bicicletes,107
+0,07,Equips emergencia,5
+0,07,Habitatge,24
+0,07,Motocicleta,1172
+0,07,Taxis,17
+0,07,Transport Comercial,816
+0,07,Transport públic,39
+0,07,Vehicle Turisme,5686
+0,07,Vehicles especials,13
+0,07,Vianants,400
+0,08,Bicicletes,302
+0,08,Equips emergencia,6
+0,08,Habitatge,17
+0,08,Motocicleta,3513
+0,08,Taxis,56
+0,08,Transport Comercial,2748
+0,08,Transport públic,72
+0,08,Vehicle Turisme,10431
+0,08,Vehicles especials,26
+0,08,Vianants,787
+0,09,Bicicletes,329
+0,09,Equips emergencia,11
+0,09,Habitatge,22
+0,09,Motocicleta,3157
+0,09,Taxis,116
+0,09,Transport Comercial,7958
+0,09,Transport públic,129
+0,09,Vehicle Turisme,21330
+0,09,Vehicles especials,25
+0,09,Vianants,1173
+0,10,Bicicletes,178
+0,10,Equips emergencia,11
+0,10,Habitatge,21
+0,10,Motocicleta,2395
+0,10,Taxis,156
+0,10,Transport Comercial,9052
+0,10,Transport públic,136
+0,10,Vehicle Turisme,23907
+0,10,Vehicles especials,33
+0,10,Vianants,1159
+0,11,Bicicletes,246
+0,11,Equips emergencia,13
+0,11,Habitatge,11
+0,11,Motocicleta,2187
+0,11,Taxis,95
+0,11,Transport Comercial,5040
+0,11,Transport públic,158
+0,11,Vehicle Turisme,17010
+0,11,Vehicles especials,33
+0,11,Vianants,1155
+0,12,Bicicletes,388
+0,12,Equips emergencia,16
+0,12,Habitatge,26
+0,12,Motocicleta,2911
+0,12,Patinet,1
+0,12,Taxis,194
+0,12,Transport Comercial,9783
+0,12,Transport públic,174
+0,12,Vehicle Turisme,25581
+0,12,Vehicles especials,36
+0,12,Vianants,1284
+0,13,Bicicletes,336
+0,13,Equips emergencia,15
+0,13,Habitatge,20
+0,13,Motocicleta,2471
+0,13,Taxis,119
+0,13,Transport Comercial,6144
+0,13,Transport públic,129
+0,13,Vehicle Turisme,19262
+0,13,Vehicles especials,34
+0,13,Vianants,905
+0,14,Bicicletes,171
+0,14,Equips emergencia,18
+0,14,Habitatge,12
+0,14,Motocicleta,1794
+0,14,Taxis,106
+0,14,Transport Comercial,5497
+0,14,Transport públic,99
+0,14,Vehicle Turisme,15739
+0,14,Vehicles especials,16
+0,14,Vianants,630
+0,15,Bicicletes,390
+0,15,Equips emergencia,13
+0,15,Habitatge,20
+0,15,Motocicleta,2674
+0,15,Taxis,144
+0,15,Transport Comercial,4634
+0,15,Transport públic,85
+0,15,Vehicle Turisme,17969
+0,15,Vehicles especials,20
+0,15,Vianants,743
+0,16,Bicicletes,631
+0,16,Equips emergencia,13
+0,16,Habitatge,24
+0,16,Motocicleta,3424
+0,16,Taxis,151
+0,16,Transport Comercial,7613
+0,16,Transport públic,94
+0,16,Vehicle Turisme,22385
+0,16,Vehicles especials,27
+0,16,Vianants,949
+0,17,Bicicletes,611
+0,17,Equips emergencia,10
+0,17,Habitatge,23
+0,17,Motocicleta,2856
+0,17,Taxis,117
+0,17,Transport Comercial,5560
+0,17,Transport públic,67
+0,17,Vehicle Turisme,20027
+0,17,Vehicles especials,19
+0,17,Vianants,784
+0,18,Bicicletes,550
+0,18,Equips emergencia,16
+0,18,Habitatge,28
+0,18,Motocicleta,2406
+0,18,Taxis,96
+0,18,Transport Comercial,1699
+0,18,Transport públic,72
+0,18,Vehicle Turisme,12702
+0,18,Vehicles especials,13
+0,18,Vianants,456
+0,19,Bicicletes,450
+0,19,Equips emergencia,14
+0,19,Habitatge,31
+0,19,Motocicleta,2711
+0,19,Taxis,87
+0,19,Transport Comercial,2628
+0,19,Transport públic,49
+0,19,Vehicle Turisme,17220
+0,19,Vehicles especials,14
+0,19,Vianants,494
+0,20,Bicicletes,504
+0,20,Equips emergencia,13
+0,20,Habitatge,5
+0,20,Motocicleta,2309
+0,20,Taxis,30
+0,20,Transport Comercial,648
+0,20,Transport públic,18
+0,20,Vehicle Turisme,7219
+0,20,Vehicles especials,5
+0,20,Vianants,102
+0,21,Bicicletes,260
+0,21,Equips emergencia,6
+0,21,Habitatge,2
+0,21,Motocicleta,1315
+0,21,Taxis,18
+0,21,Transport Comercial,474
+0,21,Transport públic,12
+0,21,Vehicle Turisme,6082
+0,21,Vehicles especials,3
+0,21,Vianants,56
+0,22,Bicicletes,77
+0,22,Equips emergencia,9
+0,22,Habitatge,2
+0,22,Motocicleta,722
+0,22,Taxis,11
+0,22,Transport Comercial,326
+0,22,Transport públic,10
+0,22,Vehicle Turisme,5284
+0,22,Vehicles especials,1
+0,22,Vianants,25
+0,23,Bicicletes,293
+0,23,Equips emergencia,5
+0,23,Motocicleta,934
+0,23,Taxis,17
+0,23,Transport Comercial,343
+0,23,Transport públic,14
+0,23,Vehicle Turisme,6239
+0,23,Vehicles especials,4
+0,23,Vianants,56
+1,00,Bicicletes,400
+1,00,Equips emergencia,2
+1,00,Habitatge,4
+1,00,Motocicleta,1074
+1,00,Taxis,50
+1,00,Transport Comercial,339
+1,00,Transport públic,9
+1,00,Vehicle Turisme,6248
+1,00,Vehicles especials,1
+1,00,Vianants,55
+1,01,Bicicletes,343
+1,01,Equips emergencia,8
+1,01,Motocicleta,817
+1,01,Taxis,34
+1,01,Transport Comercial,256
+1,01,Transport públic,12
+1,01,Vehicle Turisme,4513
+1,01,Vehicles especials,3
+1,01,Vianants,51
+1,02,Bicicletes,153
+1,02,Equips emergencia,5
+1,02,Habitatge,2
+1,02,Motocicleta,538
+1,02,Taxis,18
+1,02,Transport Comercial,152
+1,02,Transport públic,12
+1,02,Vehicle Turisme,2383
+1,02,Vehicles especials,1
+1,02,Vianants,52
+1,03,Bicicletes,122
+1,03,Equips emergencia,4
+1,03,Motocicleta,363
+1,03,Taxis,30
+1,03,Transport Comercial,143
+1,03,Transport públic,8
+1,03,Vehicle Turisme,2145
+1,03,Vehicles especials,1
+1,03,Vianants,53
+1,04,Bicicletes,141
+1,04,Equips emergencia,11
+1,04,Motocicleta,424
+1,04,Taxis,49
+1,04,Transport Comercial,253
+1,04,Transport públic,10
+1,04,Vehicle Turisme,2720
+1,04,Vehicles especials,1
+1,04,Vianants,68
+1,05,Bicicletes,84
+1,05,Equips emergencia,10
+1,05,Habitatge,1
+1,05,Motocicleta,383
+1,05,Taxis,20
+1,05,Transport Comercial,343
+1,05,Transport públic,3
+1,05,Vehicle Turisme,2977
+1,05,Vianants,57
+1,06,Bicicletes,16
+1,06,Equips emergencia,2
+1,06,Motocicleta,385
+1,06,Taxis,4
+1,06,Transport Comercial,288
+1,06,Transport públic,20
+1,06,Vehicle Turisme,1669
+1,06,Vianants,65
+1,07,Bicicletes,169
+1,07,Equips emergencia,3
+1,07,Habitatge,4
+1,07,Motocicleta,1665
+1,07,Taxis,23
+1,07,Transport Comercial,789
+1,07,Transport públic,28
+1,07,Vehicle Turisme,4636
+1,07,Vehicles especials,14
+1,07,Vianants,456
+1,08,Bicicletes,486
+1,08,Equips emergencia,6
+1,08,Habitatge,13
+1,08,Motocicleta,4346
+1,08,Taxis,63
+1,08,Transport Comercial,3051
+1,08,Transport públic,80
+1,08,Vehicle Turisme,10313
+1,08,Vehicles especials,15
+1,08,Vianants,836
+1,09,Bicicletes,441
+1,09,Equips emergencia,10
+1,09,Habitatge,18
+1,09,Motocicleta,3158
+1,09,Taxis,163
+1,09,Transport Comercial,9058
+1,09,Transport públic,123
+1,09,Vehicle Turisme,21256
+1,09,Vehicles especials,21
+1,09,Vianants,1262
+1,10,Bicicletes,229
+1,10,Equips emergencia,13
+1,10,Habitatge,19
+1,10,Motocicleta,2639
+1,10,Taxis,213
+1,10,Transport Comercial,10204
+1,10,Transport públic,159
+1,10,Vehicle Turisme,24900
+1,10,Vehicles especials,29
+1,10,Vianants,1268
+1,11,Bicicletes,295
+1,11,Equips emergencia,15
+1,11,Habitatge,12
+1,11,Motocicleta,2446
+1,11,Taxis,104
+1,11,Transport Comercial,5783
+1,11,Transport públic,175
+1,11,Vehicle Turisme,17348
+1,11,Vehicles especials,23
+1,11,Vianants,1215
+1,12,Bicicletes,434
+1,12,Equips emergencia,13
+1,12,Habitatge,25
+1,12,Motocicleta,3003
+1,12,Taxis,183
+1,12,Transport Comercial,10722
+1,12,Transport públic,172
+1,12,Vehicle Turisme,26041
+1,12,Vehicles especials,33
+1,12,Vianants,1380
+1,13,Bicicletes,398
+1,13,Equips emergencia,19
+1,13,Habitatge,18
+1,13,Motocicleta,2483
+1,13,Taxis,128
+1,13,Transport Comercial,6373
+1,13,Transport públic,152
+1,13,Vehicle Turisme,19185
+1,13,Vehicles especials,19
+1,13,Vianants,973
+1,14,Bicicletes,192
+1,14,Equips emergencia,11
+1,14,Habitatge,19
+1,14,Motocicleta,1814
+1,14,Taxis,107
+1,14,Transport Comercial,5725
+1,14,Transport públic,124
+1,14,Vehicle Turisme,15587
+1,14,Vehicles especials,10
+1,14,Vianants,708
+1,15,Bicicletes,393
+1,15,Equips emergencia,11
+1,15,Habitatge,11
+1,15,Motocicleta,2870
+1,15,Taxis,188
+1,15,Transport Comercial,4691
+1,15,Transport públic,100
+1,15,Vehicle Turisme,18357
+1,15,Vehicles especials,15
+1,15,Vianants,746
+1,16,Bicicletes,732
+1,16,Equips emergencia,13
+1,16,Habitatge,21
+1,16,Motocicleta,3643
+1,16,Taxis,155
+1,16,Transport Comercial,7757
+1,16,Transport públic,104
+1,16,Vehicle Turisme,23357
+1,16,Vehicles especials,26
+1,16,Vianants,957
+1,17,Bicicletes,760
+1,17,Equips emergencia,15
+1,17,Habitatge,26
+1,17,Motocicleta,3402
+1,17,Taxis,116
+1,17,Transport Comercial,5637
+1,17,Transport públic,87
+1,17,Vehicle Turisme,20983
+1,17,Vehicles especials,17
+1,17,Vianants,769
+1,18,Bicicletes,625
+1,18,Equips emergencia,11
+1,18,Habitatge,19
+1,18,Motocicleta,2562
+1,18,Patinet,1
+1,18,Taxis,76
+1,18,Transport Comercial,1903
+1,18,Transport públic,80
+1,18,Vehicle Turisme,13363
+1,18,Vehicles especials,11
+1,18,Vianants,437
+1,19,Bicicletes,593
+1,19,Equips emergencia,13
+1,19,Habitatge,45
+1,19,Motocicleta,2832
+1,19,Taxis,109
+1,19,Transport Comercial,2683
+1,19,Transport públic,53
+1,19,Vehicle Turisme,17615
+1,19,Vehicles especials,12
+1,19,Vianants,472
+1,20,Bicicletes,549
+1,20,Equips emergencia,10
+1,20,Habitatge,2
+1,20,Motocicleta,2319
+1,20,Taxis,49
+1,20,Transport Comercial,664
+1,20,Transport públic,17
+1,20,Vehicle Turisme,7368
+1,20,Vehicles especials,10
+1,20,Vianants,130
+1,21,Bicicletes,258
+1,21,Equips emergencia,9
+1,21,Habitatge,2
+1,21,Motocicleta,1333
+1,21,Taxis,15
+1,21,Transport Comercial,469
+1,21,Transport públic,6
+1,21,Vehicle Turisme,6145
+1,21,Vianants,80
+1,22,Bicicletes,83
+1,22,Equips emergencia,6
+1,22,Habitatge,1
+1,22,Motocicleta,801
+1,22,Taxis,13
+1,22,Transport Comercial,364
+1,22,Transport públic,19
+1,22,Vehicle Turisme,5063
+1,22,Vehicles especials,1
+1,22,Vianants,34
+1,23,Bicicletes,407
+1,23,Equips emergencia,3
+1,23,Motocicleta,1059
+1,23,Taxis,24
+1,23,Transport Comercial,403
+1,23,Transport públic,14
+1,23,Vehicle Turisme,6620
+1,23,Vehicles especials,2
+1,23,Vianants,62
+2,00,Bicicletes,593
+2,00,Equips emergencia,8
+2,00,Habitatge,1
+2,00,Motocicleta,1263
+2,00,Taxis,36
+2,00,Transport Comercial,351
+2,00,Transport públic,9
+2,00,Vehicle Turisme,6612
+2,00,Vehicles especials,3
+2,00,Vianants,68
+2,01,Bicicletes,375
+2,01,Equips emergencia,5
+2,01,Habitatge,4
+2,01,Motocicleta,967
+2,01,Taxis,36
+2,01,Transport Comercial,256
+2,01,Transport públic,12
+2,01,Vehicle Turisme,4649
+2,01,Vehicles especials,4
+2,01,Vianants,61
+2,02,Bicicletes,186
+2,02,Equips emergencia,2
+2,02,Habitatge,2
+2,02,Motocicleta,515
+2,02,Taxis,36
+2,02,Transport Comercial,152
+2,02,Transport públic,11
+2,02,Vehicle Turisme,2502
+2,02,Vehicles especials,3
+2,02,Vianants,39
+2,03,Bicicletes,145
+2,03,Equips emergencia,3
+2,03,Motocicleta,419
+2,03,Taxis,21
+2,03,Transport Comercial,156
+2,03,Transport públic,4
+2,03,Vehicle Turisme,2134
+2,03,Vehicles especials,1
+2,03,Vianants,45
+2,04,Bicicletes,118
+2,04,Equips emergencia,9
+2,04,Motocicleta,482
+2,04,Taxis,29
+2,04,Transport Comercial,234
+2,04,Transport públic,10
+2,04,Vehicle Turisme,2667
+2,04,Vianants,60
+2,05,Bicicletes,58
+2,05,Equips emergencia,4
+2,05,Motocicleta,376
+2,05,Taxis,7
+2,05,Transport Comercial,343
+2,05,Transport públic,9
+2,05,Vehicle Turisme,3129
+2,05,Vehicles especials,3
+2,05,Vianants,70
+2,06,Bicicletes,10
+2,06,Equips emergencia,6
+2,06,Motocicleta,384
+2,06,Taxis,4
+2,06,Transport Comercial,329
+2,06,Transport públic,23
+2,06,Vehicle Turisme,1795
+2,06,Vianants,42
+2,07,Bicicletes,112
+2,07,Equips emergencia,7
+2,07,Habitatge,15
+2,07,Motocicleta,1580
+2,07,Taxis,16
+2,07,Transport Comercial,823
+2,07,Transport públic,29
+2,07,Vehicle Turisme,4827
+2,07,Vehicles especials,12
+2,07,Vianants,446
+2,08,Bicicletes,485
+2,08,Equips emergencia,7
+2,08,Habitatge,12
+2,08,Motocicleta,4051
+2,08,Taxis,50
+2,08,Transport Comercial,3089
+2,08,Transport públic,82
+2,08,Vehicle Turisme,9783
+2,08,Vehicles especials,17
+2,08,Vianants,822
+2,09,Bicicletes,410
+2,09,Equips emergencia,11
+2,09,Habitatge,14
+2,09,Motocicleta,3070
+2,09,Taxis,142
+2,09,Transport Comercial,8561
+2,09,Transport públic,134
+2,09,Vehicle Turisme,20467
+2,09,Vehicles especials,24
+2,09,Vianants,1228
+2,10,Bicicletes,257
+2,10,Equips emergencia,14
+2,10,Habitatge,23
+2,10,Motocicleta,2818
+2,10,Taxis,155
+2,10,Transport Comercial,9885
+2,10,Transport públic,169
+2,10,Vehicle Turisme,23836
+2,10,Vehicles especials,30
+2,10,Vianants,1233
+2,11,Bicicletes,361
+2,11,Equips emergencia,14
+2,11,Habitatge,19
+2,11,Motocicleta,2522
+2,11,Taxis,90
+2,11,Transport Comercial,5512
+2,11,Transport públic,195
+2,11,Vehicle Turisme,16506
+2,11,Vehicles especials,22
+2,11,Vianants,1186
+2,12,Bicicletes,516
+2,12,Equips emergencia,11
+2,12,Habitatge,20
+2,12,Motocicleta,3107
+2,12,Taxis,168
+2,12,Transport Comercial,10382
+2,12,Transport públic,172
+2,12,Vehicle Turisme,25278
+2,12,Vehicles especials,34
+2,12,Vianants,1311
+2,13,Bicicletes,372
+2,13,Equips emergencia,16
+2,13,Habitatge,16
+2,13,Motocicleta,2566
+2,13,Taxis,125
+2,13,Transport Comercial,6339
+2,13,Transport públic,159
+2,13,Vehicle Turisme,19032
+2,13,Vehicles especials,17
+2,13,Vianants,884
+2,14,Bicicletes,174
+2,14,Equips emergencia,12
+2,14,Habitatge,16
+2,14,Motocicleta,1921
+2,14,Taxis,101
+2,14,Transport Comercial,5385
+2,14,Transport públic,154
+2,14,Vehicle Turisme,15486
+2,14,Vehicles especials,16
+2,14,Vianants,709
+2,15,Bicicletes,466
+2,15,Equips emergencia,8
+2,15,Habitatge,14
+2,15,Motocicleta,2978
+2,15,Taxis,152
+2,15,Transport Comercial,4897
+2,15,Transport públic,92
+2,15,Vehicle Turisme,18651
+2,15,Vehicles especials,16
+2,15,Vianants,656
+2,16,Bicicletes,769
+2,16,Equips emergencia,10
+2,16,Habitatge,16
+2,16,Motocicleta,3945
+2,16,Taxis,123
+2,16,Transport Comercial,7802
+2,16,Transport públic,125
+2,16,Vehicle Turisme,23060
+2,16,Vehicles especials,17
+2,16,Vianants,879
+2,17,Bicicletes,779
+2,17,Equips emergencia,10
+2,17,Habitatge,17
+2,17,Motocicleta,3295
+2,17,Patinet,1
+2,17,Taxis,143
+2,17,Transport Comercial,5788
+2,17,Transport públic,117
+2,17,Vehicle Turisme,21001
+2,17,Vehicles especials,16
+2,17,Vianants,686
+2,18,Bicicletes,563
+2,18,Equips emergencia,8
+2,18,Habitatge,39
+2,18,Motocicleta,2898
+2,18,Taxis,80
+2,18,Transport Comercial,1962
+2,18,Transport públic,84
+2,18,Vehicle Turisme,13219
+2,18,Vehicles especials,10
+2,18,Vianants,423
+2,19,Bicicletes,474
+2,19,Equips emergencia,13
+2,19,Habitatge,33
+2,19,Motocicleta,2890
+2,19,Taxis,76
+2,19,Transport Comercial,2558
+2,19,Transport públic,61
+2,19,Vehicle Turisme,17086
+2,19,Vehicles especials,12
+2,19,Vianants,432
+2,20,Bicicletes,487
+2,20,Equips emergencia,11
+2,20,Habitatge,3
+2,20,Motocicleta,2328
+2,20,Taxis,53
+2,20,Transport Comercial,625
+2,20,Transport públic,17
+2,20,Vehicle Turisme,7325
+2,20,Vehicles especials,5
+2,20,Vianants,99
+2,21,Bicicletes,225
+2,21,Equips emergencia,10
+2,21,Habitatge,1
+2,21,Motocicleta,1450
+2,21,Taxis,15
+2,21,Transport Comercial,437
+2,21,Transport públic,19
+2,21,Vehicle Turisme,6243
+2,21,Vehicles especials,2
+2,21,Vianants,57
+2,22,Bicicletes,62
+2,22,Equips emergencia,9
+2,22,Habitatge,1
+2,22,Motocicleta,792
+2,22,Taxis,11
+2,22,Transport Comercial,330
+2,22,Transport públic,14
+2,22,Vehicle Turisme,5053
+2,22,Vehicles especials,2
+2,22,Vianants,29
+2,23,Bicicletes,391
+2,23,Equips emergencia,3
+2,23,Habitatge,1
+2,23,Motocicleta,1064
+2,23,Taxis,17
+2,23,Transport Comercial,311
+2,23,Transport públic,14
+2,23,Vehicle Turisme,6135
+2,23,Vehicles especials,6
+2,23,Vianants,43
+3,00,Bicicletes,588
+3,00,Equips emergencia,4
+3,00,Motocicleta,1226
+3,00,Taxis,29
+3,00,Transport Comercial,338
+3,00,Transport públic,12
+3,00,Vehicle Turisme,6426
+3,00,Vianants,67
+3,01,Bicicletes,404
+3,01,Equips emergencia,3
+3,01,Motocicleta,997
+3,01,Taxis,32
+3,01,Transport Comercial,300
+3,01,Transport públic,3
+3,01,Vehicle Turisme,4865
+3,01,Vehicles especials,2
+3,01,Vianants,52
+3,02,Bicicletes,210
+3,02,Equips emergencia,5
+3,02,Motocicleta,559
+3,02,Taxis,15
+3,02,Transport Comercial,181
+3,02,Transport públic,10
+3,02,Vehicle Turisme,2719
+3,02,Vianants,43
+3,03,Bicicletes,149
+3,03,Equips emergencia,2
+3,03,Habitatge,1
+3,03,Motocicleta,426
+3,03,Taxis,42
+3,03,Transport Comercial,176
+3,03,Transport públic,4
+3,03,Vehicle Turisme,2126
+3,03,Vianants,40
+3,04,Bicicletes,179
+3,04,Equips emergencia,5
+3,04,Habitatge,2
+3,04,Motocicleta,605
+3,04,Taxis,23
+3,04,Transport Comercial,234
+3,04,Transport públic,6
+3,04,Vehicle Turisme,2736
+3,04,Vehicles especials,1
+3,04,Vianants,84
+3,05,Bicicletes,87
+3,05,Equips emergencia,7
+3,05,Habitatge,1
+3,05,Motocicleta,557
+3,05,Taxis,19
+3,05,Transport Comercial,344
+3,05,Transport públic,12
+3,05,Vehicle Turisme,3212
+3,05,Vianants,65
+3,06,Bicicletes,15
+3,06,Equips emergencia,6
+3,06,Motocicleta,398
+3,06,Taxis,4
+3,06,Transport Comercial,285
+3,06,Transport públic,26
+3,06,Vehicle Turisme,1763
+3,06,Vianants,57
+3,07,Bicicletes,154
+3,07,Equips emergencia,2
+3,07,Habitatge,10
+3,07,Motocicleta,1537
+3,07,Taxis,12
+3,07,Transport Comercial,783
+3,07,Transport públic,38
+3,07,Vehicle Turisme,4766
+3,07,Vehicles especials,13
+3,07,Vianants,521
+3,08,Bicicletes,427
+3,08,Equips emergencia,5
+3,08,Habitatge,11
+3,08,Motocicleta,4269
+3,08,Taxis,68
+3,08,Transport Comercial,3090
+3,08,Transport públic,95
+3,08,Vehicle Turisme,9788
+3,08,Vehicles especials,24
+3,08,Vianants,917
+3,09,Bicicletes,421
+3,09,Equips emergencia,9
+3,09,Habitatge,12
+3,09,Motocicleta,3397
+3,09,Taxis,146
+3,09,Transport Comercial,8910
+3,09,Transport públic,159
+3,09,Vehicle Turisme,20722
+3,09,Vehicles especials,21
+3,09,Vianants,1219
+3,10,Bicicletes,258
+3,10,Equips emergencia,10
+3,10,Habitatge,9
+3,10,Motocicleta,2499
+3,10,Taxis,155
+3,10,Transport Comercial,10135
+3,10,Transport públic,183
+3,10,Vehicle Turisme,24208
+3,10,Vehicles especials,19
+3,10,Vianants,1229
+3,11,Bicicletes,285
+3,11,Equips emergencia,13
+3,11,Habitatge,17
+3,11,Motocicleta,2262
+3,11,Taxis,100
+3,11,Transport Comercial,5482
+3,11,Transport públic,183
+3,11,Vehicle Turisme,16319
+3,11,Vehicles especials,27
+3,11,Vianants,1121
+3,12,Bicicletes,437
+3,12,Equips emergencia,13
+3,12,Habitatge,24
+3,12,Motocicleta,2906
+3,12,Taxis,182
+3,12,Transport Comercial,10452
+3,12,Transport públic,192
+3,12,Vehicle Turisme,24734
+3,12,Vehicles especials,35
+3,12,Vianants,1328
+3,13,Bicicletes,383
+3,13,Equips emergencia,9
+3,13,Habitatge,17
+3,13,Motocicleta,2315
+3,13,Taxis,111
+3,13,Transport Comercial,6230
+3,13,Transport públic,179
+3,13,Vehicle Turisme,18698
+3,13,Vehicles especials,12
+3,13,Vianants,953
+3,14,Bicicletes,202
+3,14,Equips emergencia,6
+3,14,Habitatge,17
+3,14,Motocicleta,1810
+3,14,Taxis,111
+3,14,Transport Comercial,5524
+3,14,Transport públic,137
+3,14,Vehicle Turisme,15915
+3,14,Vehicles especials,9
+3,14,Vianants,735
+3,15,Bicicletes,385
+3,15,Equips emergencia,11
+3,15,Habitatge,16
+3,15,Motocicleta,2705
+3,15,Taxis,156
+3,15,Transport Comercial,4725
+3,15,Transport públic,92
+3,15,Vehicle Turisme,18750
+3,15,Vehicles especials,12
+3,15,Vianants,677
+3,16,Bicicletes,625
+3,16,Equips emergencia,11
+3,16,Habitatge,14
+3,16,Motocicleta,4131
+3,16,Taxis,153
+3,16,Transport Comercial,7779
+3,16,Transport públic,138
+3,16,Vehicle Turisme,23232
+3,16,Vehicles especials,21
+3,16,Vianants,902
+3,17,Bicicletes,612
+3,17,Equips emergencia,14
+3,17,Habitatge,27
+3,17,Motocicleta,3593
+3,17,Taxis,112
+3,17,Transport Comercial,5614
+3,17,Transport públic,104
+3,17,Vehicle Turisme,20999
+3,17,Vehicles especials,15
+3,17,Vianants,789
+3,18,Bicicletes,505
+3,18,Equips emergencia,10
+3,18,Habitatge,28
+3,18,Motocicleta,2514
+3,18,Taxis,61
+3,18,Transport Comercial,1806
+3,18,Transport públic,90
+3,18,Vehicle Turisme,13157
+3,18,Vehicles especials,11
+3,18,Vianants,476
+3,19,Bicicletes,397
+3,19,Equips emergencia,12
+3,19,Habitatge,28
+3,19,Motocicleta,2661
+3,19,Taxis,82
+3,19,Transport Comercial,2470
+3,19,Transport públic,66
+3,19,Vehicle Turisme,17210
+3,19,Vehicles especials,9
+3,19,Vianants,516
+3,20,Bicicletes,358
+3,20,Equips emergencia,13
+3,20,Habitatge,1
+3,20,Motocicleta,2247
+3,20,Taxis,35
+3,20,Transport Comercial,611
+3,20,Transport públic,26
+3,20,Vehicle Turisme,7139
+3,20,Vehicles especials,2
+3,20,Vianants,115
+3,21,Bicicletes,206
+3,21,Equips emergencia,7
+3,21,Habitatge,2
+3,21,Motocicleta,1504
+3,21,Taxis,21
+3,21,Transport Comercial,446
+3,21,Transport públic,10
+3,21,Vehicle Turisme,6232
+3,21,Vehicles especials,2
+3,21,Vianants,81
+3,22,Bicicletes,70
+3,22,Equips emergencia,9
+3,22,Habitatge,1
+3,22,Motocicleta,844
+3,22,Taxis,12
+3,22,Transport Comercial,362
+3,22,Transport públic,15
+3,22,Vehicle Turisme,5394
+3,22,Vehicles especials,2
+3,22,Vianants,30
+3,23,Bicicletes,388
+3,23,Equips emergencia,2
+3,23,Habitatge,1
+3,23,Motocicleta,1255
+3,23,Taxis,30
+3,23,Transport Comercial,361
+3,23,Transport públic,7
+3,23,Vehicle Turisme,6811
+3,23,Vianants,51
+4,00,Bicicletes,530
+4,00,Equips emergencia,5
+4,00,Habitatge,5
+4,00,Motocicleta,1565
+4,00,Taxis,42
+4,00,Transport Comercial,331
+4,00,Transport públic,12
+4,00,Vehicle Turisme,7113
+4,00,Vehicles especials,1
+4,00,Vianants,52
+4,01,Bicicletes,405
+4,01,Equips emergencia,2
+4,01,Habitatge,4
+4,01,Motocicleta,1287
+4,01,Taxis,38
+4,01,Transport Comercial,292
+4,01,Transport públic,9
+4,01,Vehicle Turisme,5288
+4,01,Vehicles especials,3
+4,01,Vianants,91
+4,02,Bicicletes,275
+4,02,Equips emergencia,4
+4,02,Motocicleta,805
+4,02,Taxis,28
+4,02,Transport Comercial,176
+4,02,Transport públic,13
+4,02,Vehicle Turisme,3234
+4,02,Vianants,40
+4,03,Bicicletes,188
+4,03,Equips emergencia,8
+4,03,Motocicleta,648
+4,03,Taxis,33
+4,03,Transport Comercial,179
+4,03,Transport públic,11
+4,03,Vehicle Turisme,2433
+4,03,Vehicles especials,2
+4,03,Vianants,40
+4,04,Bicicletes,234
+4,04,Equips emergencia,5
+4,04,Habitatge,1
+4,04,Motocicleta,780
+4,04,Taxis,35
+4,04,Transport Comercial,235
+4,04,Transport públic,7
+4,04,Vehicle Turisme,3159
+4,04,Vehicles especials,4
+4,04,Vianants,64
+4,05,Bicicletes,136
+4,05,Equips emergencia,3
+4,05,Motocicleta,617
+4,05,Taxis,19
+4,05,Transport Comercial,352
+4,05,Transport públic,11
+4,05,Vehicle Turisme,3437
+4,05,Vianants,68
+4,06,Bicicletes,26
+4,06,Equips emergencia,4
+4,06,Motocicleta,462
+4,06,Taxis,4
+4,06,Transport Comercial,379
+4,06,Transport públic,15
+4,06,Vehicle Turisme,1901
+4,06,Vehicles especials,1
+4,06,Vianants,72
+4,07,Bicicletes,125
+4,07,Equips emergencia,6
+4,07,Habitatge,14
+4,07,Motocicleta,1578
+4,07,Taxis,20
+4,07,Transport Comercial,929
+4,07,Transport públic,37
+4,07,Vehicle Turisme,5238
+4,07,Vehicles especials,12
+4,07,Vianants,475
+4,08,Bicicletes,342
+4,08,Equips emergencia,3
+4,08,Habitatge,10
+4,08,Motocicleta,3436
+4,08,Taxis,80
+4,08,Transport Comercial,3263
+4,08,Transport públic,86
+4,08,Vehicle Turisme,10241
+4,08,Vehicles especials,17
+4,08,Vianants,885
+4,09,Bicicletes,352
+4,09,Equips emergencia,14
+4,09,Habitatge,13
+4,09,Motocicleta,2855
+4,09,Taxis,169
+4,09,Transport Comercial,9099
+4,09,Transport públic,170
+4,09,Vehicle Turisme,21529
+4,09,Vehicles especials,37
+4,09,Vianants,1291
+4,10,Bicicletes,197
+4,10,Equips emergencia,5
+4,10,Habitatge,16
+4,10,Motocicleta,2636
+4,10,Taxis,187
+4,10,Transport Comercial,9641
+4,10,Transport públic,168
+4,10,Vehicle Turisme,24170
+4,10,Vehicles especials,30
+4,10,Vianants,1264
+4,11,Bicicletes,262
+4,11,Equips emergencia,8
+4,11,Habitatge,30
+4,11,Motocicleta,2298
+4,11,Taxis,115
+4,11,Transport Comercial,5305
+4,11,Transport públic,273
+4,11,Vehicle Turisme,16716
+4,11,Vehicles especials,25
+4,11,Vianants,1177
+4,12,Bicicletes,347
+4,12,Equips emergencia,13
+4,12,Habitatge,23
+4,12,Motocicleta,3047
+4,12,Taxis,167
+4,12,Transport Comercial,9495
+4,12,Transport públic,199
+4,12,Vehicle Turisme,25209
+4,12,Vehicles especials,28
+4,12,Vianants,1274
+4,13,Bicicletes,338
+4,13,Equips emergencia,7
+4,13,Habitatge,23
+4,13,Motocicleta,2329
+4,13,Taxis,85
+4,13,Transport Comercial,5507
+4,13,Transport públic,183
+4,13,Vehicle Turisme,18595
+4,13,Vehicles especials,28
+4,13,Vianants,898
+4,14,Bicicletes,142
+4,14,Equips emergencia,11
+4,14,Habitatge,15
+4,14,Motocicleta,1847
+4,14,Taxis,84
+4,14,Transport Comercial,4805
+4,14,Transport públic,168
+4,14,Vehicle Turisme,16399
+4,14,Vehicles especials,7
+4,14,Vianants,706
+4,15,Bicicletes,376
+4,15,Equips emergencia,11
+4,15,Habitatge,32
+4,15,Motocicleta,3173
+4,15,Taxis,133
+4,15,Transport Comercial,4203
+4,15,Transport públic,106
+4,15,Vehicle Turisme,19232
+4,15,Vehicles especials,23
+4,15,Vianants,677
+4,16,Bicicletes,601
+4,16,Equips emergencia,13
+4,16,Habitatge,40
+4,16,Motocicleta,3981
+4,16,Taxis,122
+4,16,Transport Comercial,6852
+4,16,Transport públic,155
+4,16,Vehicle Turisme,24745
+4,16,Vehicles especials,16
+4,16,Vianants,887
+4,17,Bicicletes,624
+4,17,Equips emergencia,9
+4,17,Habitatge,52
+4,17,Motocicleta,3471
+4,17,Taxis,105
+4,17,Transport Comercial,5134
+4,17,Transport públic,128
+4,17,Vehicle Turisme,23132
+4,17,Vehicles especials,11
+4,17,Vianants,685
+4,18,Bicicletes,402
+4,18,Equips emergencia,19
+4,18,Habitatge,43
+4,18,Motocicleta,2334
+4,18,Taxis,58
+4,18,Transport Comercial,1745
+4,18,Transport públic,77
+4,18,Vehicle Turisme,14500
+4,18,Vehicles especials,8
+4,18,Vianants,435
+4,19,Bicicletes,366
+4,19,Equips emergencia,12
+4,19,Habitatge,46
+4,19,Motocicleta,2443
+4,19,Taxis,55
+4,19,Transport Comercial,2053
+4,19,Transport públic,62
+4,19,Vehicle Turisme,18059
+4,19,Vehicles especials,7
+4,19,Vianants,396
+4,20,Bicicletes,356
+4,20,Equips emergencia,17
+4,20,Habitatge,5
+4,20,Motocicleta,2026
+4,20,Taxis,45
+4,20,Transport Comercial,625
+4,20,Transport públic,22
+4,20,Vehicle Turisme,7015
+4,20,Vehicles especials,2
+4,20,Vianants,109
+4,21,Bicicletes,189
+4,21,Equips emergencia,6
+4,21,Habitatge,4
+4,21,Motocicleta,1274
+4,21,Taxis,20
+4,21,Transport Comercial,418
+4,21,Transport públic,21
+4,21,Vehicle Turisme,6361
+4,21,Vehicles especials,2
+4,21,Vianants,76
+4,22,Bicicletes,83
+4,22,Equips emergencia,11
+4,22,Habitatge,3
+4,22,Motocicleta,847
+4,22,Taxis,18
+4,22,Transport Comercial,340
+4,22,Transport públic,22
+4,22,Vehicle Turisme,5628
+4,22,Vianants,35
+4,23,Bicicletes,208
+4,23,Equips emergencia,9
+4,23,Habitatge,2
+4,23,Motocicleta,1102
+4,23,Taxis,19
+4,23,Transport Comercial,364
+4,23,Transport públic,7
+4,23,Vehicle Turisme,7177
+4,23,Vehicles especials,5
+4,23,Vianants,55
+5,00,Bicicletes,291
+5,00,Equips emergencia,3
+5,00,Habitatge,3
+5,00,Motocicleta,1413
+5,00,Taxis,35
+5,00,Transport Comercial,370
+5,00,Transport públic,12
+5,00,Vehicle Turisme,8158
+5,00,Vehicles especials,1
+5,00,Vianants,47
+5,01,Bicicletes,260
+5,01,Equips emergencia,7
+5,01,Habitatge,1
+5,01,Motocicleta,1251
+5,01,Taxis,45
+5,01,Transport Comercial,318
+5,01,Transport públic,7
+5,01,Vehicle Turisme,7184
+5,01,Vehicles especials,1
+5,01,Vianants,40
+5,02,Bicicletes,152
+5,02,Equips emergencia,1
+5,02,Habitatge,1
+5,02,Motocicleta,758
+5,02,Patinet,1
+5,02,Taxis,18
+5,02,Transport Comercial,244
+5,02,Transport públic,8
+5,02,Vehicle Turisme,4638
+5,02,Vianants,28
+5,03,Bicicletes,164
+5,03,Equips emergencia,7
+5,03,Habitatge,1
+5,03,Motocicleta,888
+5,03,Taxis,37
+5,03,Transport Comercial,221
+5,03,Transport públic,17
+5,03,Vehicle Turisme,3957
+5,03,Vianants,31
+5,04,Bicicletes,217
+5,04,Equips emergencia,2
+5,04,Motocicleta,1097
+5,04,Taxis,49
+5,04,Transport Comercial,213
+5,04,Transport públic,12
+5,04,Vehicle Turisme,4333
+5,04,Vehicles especials,1
+5,04,Vianants,49
+5,05,Bicicletes,130
+5,05,Equips emergencia,4
+5,05,Habitatge,2
+5,05,Motocicleta,688
+5,05,Taxis,26
+5,05,Transport Comercial,324
+5,05,Transport públic,7
+5,05,Vehicle Turisme,4484
+5,05,Vehicles especials,1
+5,05,Vianants,52
+5,06,Bicicletes,31
+5,06,Equips emergencia,4
+5,06,Motocicleta,534
+5,06,Taxis,10
+5,06,Transport Comercial,519
+5,06,Transport públic,21
+5,06,Vehicle Turisme,4421
+5,06,Vianants,100
+5,07,Bicicletes,56
+5,07,Equips emergencia,5
+5,07,Habitatge,3
+5,07,Motocicleta,1477
+5,07,Taxis,6
+5,07,Transport Comercial,898
+5,07,Transport públic,14
+5,07,Vehicle Turisme,6299
+5,07,Vehicles especials,2
+5,07,Vianants,150
+5,08,Bicicletes,159
+5,08,Equips emergencia,9
+5,08,Habitatge,3
+5,08,Motocicleta,2294
+5,08,Taxis,28
+5,08,Transport Comercial,1298
+5,08,Transport públic,50
+5,08,Vehicle Turisme,8894
+5,08,Vehicles especials,1
+5,08,Vianants,269
+5,09,Bicicletes,146
+5,09,Equips emergencia,2
+5,09,Habitatge,4
+5,09,Motocicleta,1825
+5,09,Taxis,46
+5,09,Transport Comercial,1811
+5,09,Transport públic,62
+5,09,Vehicle Turisme,12047
+5,09,Vehicles especials,3
+5,09,Vianants,231
+5,10,Bicicletes,114
+5,10,Equips emergencia,4
+5,10,Habitatge,3
+5,10,Motocicleta,1341
+5,10,Taxis,71
+5,10,Transport Comercial,1672
+5,10,Transport públic,53
+5,10,Vehicle Turisme,11964
+5,10,Vehicles especials,2
+5,10,Vianants,201
+5,11,Bicicletes,243
+5,11,Equips emergencia,7
+5,11,Habitatge,6
+5,11,Motocicleta,1593
+5,11,Taxis,52
+5,11,Transport Comercial,1098
+5,11,Transport públic,64
+5,11,Vehicle Turisme,9054
+5,11,Vehicles especials,4
+5,11,Vianants,223
+5,12,Bicicletes,352
+5,12,Equips emergencia,8
+5,12,Habitatge,5
+5,12,Motocicleta,2134
+5,12,Taxis,81
+5,12,Transport Comercial,1567
+5,12,Transport públic,70
+5,12,Vehicle Turisme,13691
+5,12,Vehicles especials,5
+5,12,Vianants,222
+5,13,Bicicletes,298
+5,13,Equips emergencia,6
+5,13,Habitatge,1
+5,13,Motocicleta,1463
+5,13,Taxis,54
+5,13,Transport Comercial,1017
+5,13,Transport públic,68
+5,13,Vehicle Turisme,10871
+5,13,Vehicles especials,5
+5,13,Vianants,147
+5,14,Bicicletes,155
+5,14,Equips emergencia,10
+5,14,Habitatge,5
+5,14,Motocicleta,1334
+5,14,Taxis,44
+5,14,Transport Comercial,966
+5,14,Transport públic,32
+5,14,Vehicle Turisme,10754
+5,14,Vehicles especials,1
+5,14,Vianants,101
+5,15,Bicicletes,254
+5,15,Equips emergencia,14
+5,15,Habitatge,5
+5,15,Motocicleta,1754
+5,15,Taxis,42
+5,15,Transport Comercial,1315
+5,15,Transport públic,45
+5,15,Vehicle Turisme,14578
+5,15,Vehicles especials,1
+5,15,Vianants,128
+5,16,Bicicletes,398
+5,16,Equips emergencia,7
+5,16,Habitatge,13
+5,16,Motocicleta,2281
+5,16,Taxis,51
+5,16,Transport Comercial,1431
+5,16,Transport públic,44
+5,16,Vehicle Turisme,15967
+5,16,Vehicles especials,6
+5,16,Vianants,124
+5,17,Bicicletes,275
+5,17,Equips emergencia,13
+5,17,Habitatge,6
+5,17,Motocicleta,1972
+5,17,Patinet,7
+5,17,Taxis,50
+5,17,Transport Comercial,1029
+5,17,Transport públic,23
+5,17,Vehicle Turisme,12979
+5,17,Vehicles especials,3
+5,17,Vianants,90
+5,18,Bicicletes,213
+5,18,Equips emergencia,11
+5,18,Habitatge,4
+5,18,Motocicleta,1390
+5,18,Taxis,50
+5,18,Transport Comercial,647
+5,18,Transport públic,39
+5,18,Vehicle Turisme,8205
+5,18,Vehicles especials,1
+5,18,Vianants,75
+5,19,Bicicletes,162
+5,19,Equips emergencia,9
+5,19,Habitatge,4
+5,19,Motocicleta,1355
+5,19,Taxis,33
+5,19,Transport Comercial,496
+5,19,Transport públic,25
+5,19,Vehicle Turisme,8150
+5,19,Vehicles especials,1
+5,19,Vianants,65
+5,20,Bicicletes,223
+5,20,Equips emergencia,7
+5,20,Habitatge,4
+5,20,Motocicleta,1211
+5,20,Taxis,29
+5,20,Transport Comercial,439
+5,20,Transport públic,24
+5,20,Vehicle Turisme,6809
+5,20,Vehicles especials,7
+5,20,Vianants,79
+5,21,Bicicletes,119
+5,21,Equips emergencia,7
+5,21,Habitatge,3
+5,21,Motocicleta,964
+5,21,Taxis,18
+5,21,Transport Comercial,382
+5,21,Transport públic,16
+5,21,Vehicle Turisme,6073
+5,21,Vehicles especials,1
+5,21,Vianants,42
+5,22,Bicicletes,59
+5,22,Equips emergencia,9
+5,22,Habitatge,1
+5,22,Motocicleta,691
+5,22,Taxis,14
+5,22,Transport Comercial,360
+5,22,Transport públic,12
+5,22,Vehicle Turisme,6888
+5,22,Vehicles especials,2
+5,22,Vianants,24
+5,23,Bicicletes,175
+5,23,Equips emergencia,11
+5,23,Habitatge,3
+5,23,Motocicleta,1032
+5,23,Taxis,30
+5,23,Transport Comercial,380
+5,23,Transport públic,12
+5,23,Vehicle Turisme,7802
+5,23,Vehicles especials,3
+5,23,Vianants,31
+6,00,Bicicletes,275
+6,00,Equips emergencia,3
+6,00,Habitatge,2
+6,00,Motocicleta,1301
+6,00,Taxis,27
+6,00,Transport Comercial,390
+6,00,Transport públic,15
+6,00,Vehicle Turisme,8767
+6,00,Vehicles especials,2
+6,00,Vianants,43
+6,01,Bicicletes,236
+6,01,Equips emergencia,4
+6,01,Habitatge,2
+6,01,Motocicleta,973
+6,01,Taxis,25
+6,01,Transport Comercial,336
+6,01,Transport públic,20
+6,01,Vehicle Turisme,8205
+6,01,Vehicles especials,4
+6,01,Vianants,29
+6,02,Bicicletes,121
+6,02,Equips emergencia,4
+6,02,Habitatge,2
+6,02,Motocicleta,660
+6,02,Taxis,20
+6,02,Transport Comercial,251
+6,02,Transport públic,8
+6,02,Vehicle Turisme,5559
+6,02,Vehicles especials,2
+6,02,Vianants,19
+6,03,Bicicletes,119
+6,03,Equips emergencia,6
+6,03,Motocicleta,626
+6,03,Taxis,28
+6,03,Transport Comercial,180
+6,03,Transport públic,14
+6,03,Vehicle Turisme,4825
+6,03,Vianants,26
+6,04,Bicicletes,143
+6,04,Equips emergencia,2
+6,04,Habitatge,3
+6,04,Motocicleta,854
+6,04,Taxis,41
+6,04,Transport Comercial,214
+6,04,Transport públic,19
+6,04,Vehicle Turisme,4951
+6,04,Vianants,23
+6,05,Bicicletes,96
+6,05,Equips emergencia,5
+6,05,Habitatge,1
+6,05,Motocicleta,592
+6,05,Taxis,55
+6,05,Transport Comercial,218
+6,05,Transport públic,15
+6,05,Vehicle Turisme,4819
+6,05,Vianants,19
+6,06,Bicicletes,20
+6,06,Equips emergencia,4
+6,06,Habitatge,1
+6,06,Motocicleta,424
+6,06,Taxis,13
+6,06,Transport Comercial,311
+6,06,Transport públic,18
+6,06,Vehicle Turisme,5059
+6,06,Vianants,40
+6,07,Bicicletes,58
+6,07,Equips emergencia,4
+6,07,Motocicleta,939
+6,07,Taxis,11
+6,07,Transport Comercial,544
+6,07,Transport públic,28
+6,07,Vehicle Turisme,6796
+6,07,Vehicles especials,1
+6,07,Vianants,49
+6,08,Bicicletes,124
+6,08,Equips emergencia,5
+6,08,Habitatge,4
+6,08,Motocicleta,1348
+6,08,Taxis,22
+6,08,Transport Comercial,872
+6,08,Transport públic,39
+6,08,Vehicle Turisme,9233
+6,08,Vehicles especials,3
+6,08,Vianants,105
+6,09,Bicicletes,128
+6,09,Equips emergencia,7
+6,09,Habitatge,6
+6,09,Motocicleta,1066
+6,09,Taxis,22
+6,09,Transport Comercial,871
+6,09,Transport públic,49
+6,09,Vehicle Turisme,10117
+6,09,Vehicles especials,1
+6,09,Vianants,89
+6,10,Bicicletes,118
+6,10,Equips emergencia,8
+6,10,Habitatge,3
+6,10,Motocicleta,861
+6,10,Taxis,27
+6,10,Transport Comercial,658
+6,10,Transport públic,59
+6,10,Vehicle Turisme,8604
+6,10,Vehicles especials,1
+6,10,Vianants,87
+6,11,Bicicletes,240
+6,11,Equips emergencia,11
+6,11,Habitatge,7
+6,11,Motocicleta,1129
+6,11,Taxis,33
+6,11,Transport Comercial,694
+6,11,Transport públic,77
+6,11,Vehicle Turisme,9003
+6,11,Vehicles especials,5
+6,11,Vianants,82
+6,12,Bicicletes,406
+6,12,Equips emergencia,10
+6,12,Habitatge,5
+6,12,Motocicleta,1326
+6,12,Taxis,38
+6,12,Transport Comercial,687
+6,12,Transport públic,62
+6,12,Vehicle Turisme,10177
+6,12,Vehicles especials,5
+6,12,Vianants,99
+6,13,Bicicletes,272
+6,13,Equips emergencia,6
+6,13,Habitatge,1
+6,13,Motocicleta,1118
+6,13,Taxis,32
+6,13,Transport Comercial,571
+6,13,Transport públic,58
+6,13,Vehicle Turisme,8837
+6,13,Vehicles especials,2
+6,13,Vianants,52
+6,14,Bicicletes,187
+6,14,Equips emergencia,11
+6,14,Habitatge,3
+6,14,Motocicleta,999
+6,14,Taxis,23
+6,14,Transport Comercial,601
+6,14,Transport públic,32
+6,14,Vehicle Turisme,9384
+6,14,Vianants,49
+6,15,Bicicletes,246
+6,15,Equips emergencia,6
+6,15,Habitatge,9
+6,15,Motocicleta,1206
+6,15,Taxis,44
+6,15,Transport Comercial,961
+6,15,Transport públic,49
+6,15,Vehicle Turisme,12068
+6,15,Vehicles especials,2
+6,15,Vianants,75
+6,16,Bicicletes,310
+6,16,Equips emergencia,9
+6,16,Habitatge,8
+6,16,Motocicleta,1510
+6,16,Taxis,27
+6,16,Transport Comercial,795
+6,16,Transport públic,38
+6,16,Vehicle Turisme,11894
+6,16,Vehicles especials,2
+6,16,Vianants,77
+6,17,Bicicletes,334
+6,17,Equips emergencia,7
+6,17,Habitatge,11
+6,17,Motocicleta,1631
+6,17,Taxis,35
+6,17,Transport Comercial,652
+6,17,Transport públic,21
+6,17,Vehicle Turisme,10563
+6,17,Vehicles especials,2
+6,17,Vianants,80
+6,18,Bicicletes,311
+6,18,Equips emergencia,6
+6,18,Habitatge,5
+6,18,Motocicleta,1290
+6,18,Taxis,23
+6,18,Transport Comercial,518
+6,18,Transport públic,20
+6,18,Vehicle Turisme,7640
+6,18,Vehicles especials,2
+6,18,Vianants,59
+6,19,Bicicletes,256
+6,19,Equips emergencia,7
+6,19,Habitatge,7
+6,19,Motocicleta,1178
+6,19,Taxis,21
+6,19,Transport Comercial,403
+6,19,Transport públic,19
+6,19,Vehicle Turisme,6775
+6,19,Vehicles especials,4
+6,19,Vianants,54
+6,20,Bicicletes,227
+6,20,Equips emergencia,4
+6,20,Habitatge,3
+6,20,Motocicleta,1050
+6,20,Taxis,25
+6,20,Transport Comercial,391
+6,20,Transport públic,28
+6,20,Vehicle Turisme,6723
+6,20,Vehicles especials,1
+6,20,Vianants,52
+6,21,Bicicletes,102
+6,21,Equips emergencia,1
+6,21,Habitatge,4
+6,21,Motocicleta,715
+6,21,Taxis,8
+6,21,Transport Comercial,304
+6,21,Transport públic,15
+6,21,Vehicle Turisme,5600
+6,21,Vehicles especials,1
+6,21,Vianants,22
+6,22,Bicicletes,59
+6,22,Equips emergencia,9
+6,22,Habitatge,5
+6,22,Motocicleta,556
+6,22,Taxis,15
+6,22,Transport Comercial,307
+6,22,Transport públic,12
+6,22,Vehicle Turisme,6441
+6,22,Vehicles especials,2
+6,22,Vianants,21
+6,23,Bicicletes,224
+6,23,Equips emergencia,6
+6,23,Habitatge,6
+6,23,Motocicleta,898
+6,23,Taxis,23
+6,23,Transport Comercial,340
+6,23,Transport públic,14
+6,23,Vehicle Turisme,7076
+6,23,Vehicles especials,3
+6,23,Vianants,40

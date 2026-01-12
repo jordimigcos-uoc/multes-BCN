@@ -1,0 +1,337 @@
+dia_setmana,hora,Agent,count
+0,00,Guardia Urbana,2988
+0,00,Radar,5259
+0,01,Guardia Urbana,2235
+0,01,Radar,3761
+0,02,Guardia Urbana,1197
+0,02,Radar,2216
+0,03,Guardia Urbana,1240
+0,03,Radar,1782
+0,04,Guardia Urbana,1532
+0,04,Radar,2222
+0,05,Guardia Urbana,713
+0,05,Radar,3340
+0,06,Guardia Urbana,328
+0,06,Radar,2398
+0,07,Guardia Urbana,1605
+0,07,Radar,6674
+0,08,Guardia Urbana,4107
+0,08,Radar,13851
+0,09,Guardia Urbana,4162
+0,09,Radar,30088
+0,10,Guardia Urbana,2902
+0,10,Radar,34146
+0,11,Guardia Urbana,4371
+0,11,Radar,21577
+0,12,Guardia Urbana,5760
+0,12,Radar,34634
+0,13,Guardia Urbana,4295
+0,13,Radar,25140
+0,14,Guardia Urbana,1726
+0,14,Radar,22356
+0,15,Guardia Urbana,3681
+0,15,Radar,23011
+0,16,Guardia Urbana,6660
+0,16,Radar,28651
+0,17,Guardia Urbana,6422
+0,17,Radar,23652
+0,18,Guardia Urbana,5090
+0,18,Radar,12948
+0,19,Guardia Urbana,5151
+0,19,Radar,18547
+0,20,Guardia Urbana,5228
+0,20,Radar,5625
+0,21,Guardia Urbana,2705
+0,21,Radar,5523
+0,22,Guardia Urbana,831
+0,22,Radar,5636
+0,23,Guardia Urbana,2079
+0,23,Radar,5826
+1,00,Guardia Urbana,3301
+1,00,Radar,4881
+1,01,Guardia Urbana,2889
+1,01,Radar,3148
+1,02,Guardia Urbana,1575
+1,02,Radar,1741
+1,03,Guardia Urbana,1358
+1,03,Radar,1511
+1,04,Guardia Urbana,1625
+1,04,Radar,2052
+1,05,Guardia Urbana,812
+1,05,Radar,3066
+1,06,Guardia Urbana,297
+1,06,Radar,2152
+1,07,Guardia Urbana,1802
+1,07,Radar,5985
+1,08,Guardia Urbana,4933
+1,08,Radar,14276
+1,09,Guardia Urbana,4618
+1,09,Radar,30892
+1,10,Guardia Urbana,3202
+1,10,Radar,36471
+1,11,Guardia Urbana,4898
+1,11,Radar,22518
+1,12,Guardia Urbana,6245
+1,12,Radar,35761
+1,13,Guardia Urbana,4782
+1,13,Radar,24966
+1,14,Guardia Urbana,1791
+1,14,Radar,22506
+1,15,Guardia Urbana,4011
+1,15,Radar,23371
+1,16,Guardia Urbana,7138
+1,16,Radar,29627
+1,17,Guardia Urbana,7264
+1,17,Radar,24548
+1,18,Guardia Urbana,5529
+1,18,Radar,13559
+1,19,Guardia Urbana,5659
+1,19,Radar,18768
+1,20,Guardia Urbana,5199
+1,20,Radar,5919
+1,21,Guardia Urbana,2730
+1,21,Radar,5587
+1,22,Guardia Urbana,840
+1,22,Radar,5545
+1,23,Guardia Urbana,2590
+1,23,Radar,6004
+2,00,Guardia Urbana,3715
+2,00,Radar,5229
+2,01,Guardia Urbana,3099
+2,01,Radar,3270
+2,02,Guardia Urbana,1669
+2,02,Radar,1779
+2,03,Guardia Urbana,1516
+2,03,Radar,1412
+2,04,Guardia Urbana,1551
+2,04,Radar,2058
+2,05,Guardia Urbana,699
+2,05,Radar,3300
+2,06,Guardia Urbana,349
+2,06,Radar,2244
+2,07,Guardia Urbana,1821
+2,07,Radar,6046
+2,08,Guardia Urbana,4577
+2,08,Radar,13821
+2,09,Guardia Urbana,4418
+2,09,Radar,29643
+2,10,Guardia Urbana,3277
+2,10,Radar,35143
+2,11,Guardia Urbana,4778
+2,11,Radar,21649
+2,12,Guardia Urbana,6383
+2,12,Radar,34616
+2,13,Guardia Urbana,4476
+2,13,Radar,25050
+2,14,Guardia Urbana,1778
+2,14,Radar,22196
+2,15,Guardia Urbana,4210
+2,15,Radar,23720
+2,16,Guardia Urbana,7538
+2,16,Radar,29208
+2,17,Guardia Urbana,7359
+2,17,Radar,24494
+2,18,Guardia Urbana,5541
+2,18,Radar,13745
+2,19,Guardia Urbana,5540
+2,19,Radar,18095
+2,20,Guardia Urbana,5392
+2,20,Radar,5561
+2,21,Guardia Urbana,3014
+2,21,Radar,5445
+2,22,Guardia Urbana,836
+2,22,Radar,5467
+2,23,Guardia Urbana,2313
+2,23,Radar,5672
+3,00,Guardia Urbana,3538
+3,00,Radar,5152
+3,01,Guardia Urbana,3257
+3,01,Radar,3401
+3,02,Guardia Urbana,1832
+3,02,Radar,1910
+3,03,Guardia Urbana,1473
+3,03,Radar,1493
+3,04,Guardia Urbana,1724
+3,04,Radar,2151
+3,05,Guardia Urbana,1003
+3,05,Radar,3301
+3,06,Guardia Urbana,307
+3,06,Radar,2247
+3,07,Guardia Urbana,1908
+3,07,Radar,5928
+3,08,Guardia Urbana,4527
+3,08,Radar,14167
+3,09,Guardia Urbana,4551
+3,09,Radar,30465
+3,10,Guardia Urbana,3134
+3,10,Radar,35571
+3,11,Guardia Urbana,4367
+3,11,Radar,21442
+3,12,Guardia Urbana,5729
+3,12,Radar,34574
+3,13,Guardia Urbana,4445
+3,13,Radar,24462
+3,14,Guardia Urbana,1781
+3,14,Radar,22685
+3,15,Guardia Urbana,3966
+3,15,Radar,23563
+3,16,Guardia Urbana,7002
+3,16,Radar,30004
+3,17,Guardia Urbana,7091
+3,17,Radar,24788
+3,18,Guardia Urbana,5398
+3,18,Radar,13260
+3,19,Guardia Urbana,5285
+3,19,Radar,18166
+3,20,Guardia Urbana,4949
+3,20,Radar,5598
+3,21,Guardia Urbana,2972
+3,21,Radar,5539
+3,22,Guardia Urbana,927
+3,22,Radar,5812
+3,23,Guardia Urbana,2740
+3,23,Radar,6166
+4,00,Guardia Urbana,3886
+4,00,Radar,5770
+4,01,Guardia Urbana,3608
+4,01,Radar,3811
+4,02,Guardia Urbana,2209
+4,02,Radar,2366
+4,03,Guardia Urbana,1758
+4,03,Radar,1784
+4,04,Guardia Urbana,2131
+4,04,Radar,2393
+4,05,Guardia Urbana,1266
+4,05,Radar,3377
+4,06,Guardia Urbana,462
+4,06,Radar,2402
+4,07,Guardia Urbana,1675
+4,07,Radar,6759
+4,08,Guardia Urbana,4076
+4,08,Radar,14287
+4,09,Guardia Urbana,3985
+4,09,Radar,31544
+4,10,Guardia Urbana,2905
+4,10,Radar,35409
+4,11,Guardia Urbana,4472
+4,11,Radar,21737
+4,12,Guardia Urbana,5651
+4,12,Radar,34151
+4,13,Guardia Urbana,4137
+4,13,Radar,23856
+4,14,Guardia Urbana,1845
+4,14,Radar,22339
+4,15,Guardia Urbana,4559
+4,15,Radar,23407
+4,16,Guardia Urbana,7510
+4,16,Radar,29902
+4,17,Guardia Urbana,7197
+4,17,Radar,26154
+4,18,Guardia Urbana,4821
+4,18,Radar,14800
+4,19,Guardia Urbana,4934
+4,19,Radar,18565
+4,20,Guardia Urbana,5176
+4,20,Radar,5046
+4,21,Guardia Urbana,2998
+4,21,Radar,5373
+4,22,Guardia Urbana,1137
+4,22,Radar,5850
+4,23,Guardia Urbana,2594
+4,23,Radar,6354
+5,00,Guardia Urbana,3760
+5,00,Radar,6573
+5,01,Guardia Urbana,3130
+5,01,Radar,5984
+5,02,Guardia Urbana,1757
+5,02,Radar,4092
+5,03,Guardia Urbana,1874
+5,03,Radar,3449
+5,04,Guardia Urbana,2678
+5,04,Radar,3295
+5,05,Guardia Urbana,1445
+5,05,Radar,4273
+5,06,Guardia Urbana,820
+5,06,Radar,4820
+5,07,Guardia Urbana,2306
+5,07,Radar,6604
+5,08,Guardia Urbana,3866
+5,08,Radar,9139
+5,09,Guardia Urbana,2928
+5,09,Radar,13249
+5,10,Guardia Urbana,2187
+5,10,Radar,13238
+5,11,Guardia Urbana,3937
+5,11,Radar,8407
+5,12,Guardia Urbana,5895
+5,12,Radar,12240
+5,13,Guardia Urbana,4173
+5,13,Radar,9757
+5,14,Guardia Urbana,2157
+5,14,Radar,11245
+5,15,Guardia Urbana,3961
+5,15,Radar,14175
+5,16,Guardia Urbana,6419
+5,16,Radar,13903
+5,17,Guardia Urbana,5654
+5,17,Radar,10793
+5,18,Guardia Urbana,4051
+5,18,Radar,6584
+5,19,Guardia Urbana,4073
+5,19,Radar,6227
+5,20,Guardia Urbana,4203
+5,20,Radar,4629
+5,21,Guardia Urbana,2508
+5,21,Radar,5117
+5,22,Guardia Urbana,1276
+5,22,Radar,6784
+5,23,Guardia Urbana,2992
+5,23,Radar,6487
+6,00,Guardia Urbana,4150
+6,00,Radar,6675
+6,01,Guardia Urbana,3229
+6,01,Radar,6605
+6,02,Guardia Urbana,1800
+6,02,Radar,4846
+6,03,Guardia Urbana,1823
+6,03,Radar,4001
+6,04,Guardia Urbana,2395
+6,04,Radar,3855
+6,05,Guardia Urbana,1424
+6,05,Radar,4396
+6,06,Guardia Urbana,788
+6,06,Radar,5102
+6,07,Guardia Urbana,1801
+6,07,Radar,6629
+6,08,Guardia Urbana,2789
+6,08,Radar,8966
+6,09,Guardia Urbana,2321
+6,09,Radar,10035
+6,10,Guardia Urbana,1737
+6,10,Radar,8689
+6,11,Guardia Urbana,3520
+6,11,Radar,7761
+6,12,Guardia Urbana,5312
+6,12,Radar,7503
+6,13,Guardia Urbana,3810
+6,13,Radar,7139
+6,14,Guardia Urbana,2084
+6,14,Radar,9205
+6,15,Guardia Urbana,3446
+6,15,Radar,11220
+6,16,Guardia Urbana,5611
+6,16,Radar,9059
+6,17,Guardia Urbana,6652
+6,17,Radar,6684
+6,18,Guardia Urbana,5346
+6,18,Radar,4528
+6,19,Guardia Urbana,4476
+6,19,Radar,4248
+6,20,Guardia Urbana,3994
+6,20,Radar,4510
+6,21,Guardia Urbana,1814
+6,21,Radar,4958
+6,22,Guardia Urbana,831
+6,22,Radar,6596
+6,23,Guardia Urbana,2434
+6,23,Radar,6196

@@ -66,8 +66,6 @@ export function MapaMultes(containerId, totals, perVehicle, perAgent) {
     }
   }).addTo(map);
   
-
-
   updateMapaHora(0);
 
   // Canvi de mode
@@ -101,14 +99,12 @@ export function updateMapaHora(hora) {
   } else if (currentMode === "vehicle") {
     const vehicleMap = heatDataPerVehicle.get(h);
     if (!vehicleMap || !currentVehicle) {
-      //console.warn("⚠️ Vehicle no disponible per a l'hora", h);
       return heatLayer.setLatLngs([]);
     }
     punts = vehicleMap.get(currentVehicle) || [];
   } else if (currentMode === "agent") {
     const agentMap = heatDataPerAgent.get(h);
     if (!agentMap || !currentAgent) {
-      //console.warn("⚠️ Agent no disponible per a l'hora", h);
       return heatLayer.setLatLngs([]);
     }
     punts = agentMap.get(currentAgent) || [];
@@ -123,7 +119,7 @@ export function setVehicleFilter(vehicle) {
 }
 window.setVehicleFilter = setVehicleFilter;
 
-export function setAgentFilter(agent) {
+export function setAgentFilter(agent) {  
   currentAgent = agent;
   updateMapaHora(currentHour);
 }

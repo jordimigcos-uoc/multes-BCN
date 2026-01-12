@@ -38,9 +38,11 @@ export function RaceChart(containerSelector, data) {
 
 export function updateRaceChart(hourString) {
   if (!x || !y || !svg) return;
+  
+  const hora = hourString.slice(0, 2);
 
   const hourData = currentData
-    .filter(d => d.hora === hourString)
+    .filter(d => d.hora === hora)
     .sort((a, b) => b.count - a.count)
     .slice(0, 10); // mostra els 10 primers
 
@@ -96,6 +98,7 @@ export function updateRaceChart(hourString) {
 export function inicialitzarRaceChart(data) {
   raceDataGlobal = data;
   RaceChart("#race-chart", data); // o el contenidor que facis servir
+  window.updateRaceChart = updateRaceChart;
 }
 
 

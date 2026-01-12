@@ -100,11 +100,11 @@ export function HeatmapWeek(containerSelector, data, groupedTotal, groupedByVehi
     return matrix;
   }
 
-  function update(metric, vehicle) {
+  function update(metric, vehicle) {    
     const matrix = computeMatrix(metric, vehicle);
-    const maxValue = d3.max(matrix, d => d.value);
+    const maxValue = d3.max(matrix, d => +d.value || 0);
     color.domain([0, maxValue || 1]);
-
+    
     const cells = svg.selectAll("rect")
       .data(matrix, d => d.variable + "-" + d.group);
 
@@ -129,6 +129,5 @@ export function HeatmapWeek(containerSelector, data, groupedTotal, groupedByVehi
 
     cells.exit().remove();
   }
-
   return { update };
 }

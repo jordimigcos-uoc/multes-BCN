@@ -31,9 +31,9 @@ library(hms)
 ```{r rutes}
 ruta_data <- file.path("..", "data")
 ruta_denuncies <- file.path("..", "data", "denuncies")
-ruta_conceptes <- file.path("..", "data", "conceptes")
-ruta_codis <- file.path("..", "data", "codis")
-ruta_vehicle <- file.path("..", "data", "vehicle")
+#ruta_conceptes <- file.path("..", "data", "conceptes")
+#ruta_codis <- file.path("..", "data", "codis")
+#ruta_vehicle <- file.path("..", "data", "vehicle")
 ruta_output <- file.path("..", "output")
 ```
 
@@ -72,7 +72,8 @@ df_denuncies <- df_denuncies %>%
     -Nom_Barri,
     -Seccio_Censal,
     -Grua,
-    -Codi_Districte
+    -Codi_Districte,
+    -Import_Nominal_.
   )
 ```
 
@@ -133,71 +134,7 @@ df_denuncies <- df_denuncies %>%
   )
 ```
 
-## Informació de la codificació oficial de les denúncies i sancions
-
-```{r codis}
-fitxers_codis <- list.files(path = ruta_codis, pattern = "\\.csv$", full.names = TRUE)
-print(fitxers_codis)
-```
-
-Llegeim tots els CSV i els unim i eliminem valors duplicats
-
-```{r}
-df_codis <- do.call(rbind, lapply(fitxers_codis, read.csv))
-
-df_codis <- df_codis %>%
-  distinct(Infraccio_Codi, .keep_all = TRUE)
-```
-
-```{r}
-names(df_codis)
-dim (df_codis)
-```
-
-## Informació del Tipyus de vehicle
-
-```{r vehicle}
-fitxers_vehicle <- list.files(path = ruta_vehicle, pattern = "\\.csv$", full.names = TRUE)
-print(fitxers_vehicle)
-```
-
-Llegeim tots els CSV i els unim i eliminem valors duplicats
-
-```{r}
-df_vehicle <- do.call(rbind, lapply(fitxers_vehicle, read.csv))
-
-df_vehicle <- df_vehicle %>%
-  distinct(Tipus_Vehicle_Codi, .keep_all = TRUE)
-```
-
-```{r}
-names(df_vehicle)
-dim (df_vehicle)
-```
-# Enriquim el dataset
-
-Afegim una columna amb el dia de la setmana i un altre amb el mes
-
-```{r}
-# Forcem que sigui en català
-Sys.setlocale("LC_TIME", "Catalan")
-
-
-# Convertim Data_infraccio a Date
-df_denuncies <- df_denuncies %>%
-  mutate(
-    Data_Infraccio = as.Date(Data_Infraccio)
-  )
-
-# Afegim dia de la setmana i mes
-df_denuncies <- df_denuncies %>%
-  mutate(
-    dia_setmana = weekdays(Data_Infraccio, abbreviate = FALSE),
-    mes = months(Data_Infraccio, abbreviate = FALSE)
-  )
-```
-
-Afegim columna amb la frnaja horària de 60 minuts
+Afegim columna amb la franja horària de 60 minuts
 
 
 ```{r}
@@ -233,14 +170,49 @@ df_denuncies <- df_denuncies %>%
 ```
 
 
+```{r}
+df_denuncies
+names(df_denuncies)
+```
+
+# Ssancions per hora
+```{r}
+df_per_hora <- df_denuncies %>%
+  mutate(Hora = substr(franja_hora, 1, 2)) %>%   # extreu "00" de "00:00"
+  count(Hora, name = "total_multes") %>%
+  arrange(Hora)
+```
+
+Guardem csv pel radialchart de sancions per hora
+
+```{r}
+write.csv(df_per_hora,
+          file = file.path(ruta_output, "denuncies_hora.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
+# Total per franja horaria i districte
+
+```{r}
+df_per_hora_districte <- df_denuncies %>%
+  mutate(Hora = substr(franja_hora, 1, 2)) %>%   # converteix "00:00" → "00"
+  count(Nom_Districte, Hora, name = "total_multes") %>%
+  arrange(Nom_Districte, Hora)
+
+df_per_hora_districte
+
+```
 
 
-
-
-
-
-
-
+```{r}
+write.csv(df_per_hora_districte,
+          file = file.path(ruta_output, "denuncies_hora_districte.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
 
 
 # Classificació de vehicles
@@ -276,26 +248,101 @@ df_denuncies <- df_denuncies %>%
 
 ```
 
+```{r}
+df_per_vehicle_hora <- df_denuncies %>%
+  mutate(Hora = substr(franja_hora, 1, 2)) %>%   # "00:00" → "00"
+  count(Grup_Vehicle, Hora, name = "total_multes") %>%
+  arrange(as.numeric(Hora), Grup_Vehicle)
+df_per_vehicle_hora
+
+```
 
 ```{r}
-# Total de multes
-total_multes <- nrow(df_denuncies)
+write.csv(df_per_hora_districte,
+          file = file.path(ruta_output, "denuncies_vehicle.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
 
-# Import total de totes les multes
-import_total <- sum(df_denuncies$Import_Nominal_., na.rm = TRUE)
+# Per hora i coordenades (50% superior)
 
-total_multes
-import_total
+```{r}
+df_top50_hora_coords <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%      # "08:00" → "08"
+  count(hora, lat, lon, name = "count") %>%         # multes per hora + coordenades
+  group_by(hora) %>%
+  arrange(desc(count), .by_group = TRUE) %>%        # ordena dins de cada hora
+  mutate(rank = row_number(),
+         total = n(),
+         threshold = ceiling(total * 0.5)) %>%      # 50% superior
+  filter(rank <= threshold) %>%                     # ens quedem només el top 50%
+  select(-rank, -total, -threshold) %>%             # neteja
+  ungroup()
+
+df_top50_hora_coords
+dim(df_top50_hora_coords)
+```
+
+```{r}
+write.csv(df_top50_hora_coords,
+          file = file.path(ruta_output, "denuncies_hora_coords.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
+
+
+Coordenades, hora i vehicle
+
+```{r}
+
+
+df_top50_hora_coords_vehicle <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%        # "08:00" → "08"
+  
+  # Comptem multes per combinació d'hora + coordenades + grup de vehicle
+  count(hora, lat, lon, Grup_Vehicle, name = "count") %>%
+  
+  # El filtratge del top 50% es fa dins de cada hora i grup de vehicle
+  group_by(hora, Grup_Vehicle) %>%
+  arrange(desc(count), .by_group = TRUE) %>%
+  
+  mutate(
+    rank = row_number(),
+    total = n(),
+    threshold = ceiling(total * 0.5)   # top 50%
+  ) %>%
+  
+  filter(rank <= threshold) %>%         # ens quedem només el top 50%
+  select(-rank, -total, -threshold) %>% # neteja
+  ungroup()
+
 
 
 ```
+
+```{r}
+df_top50_hora_coords_vehicle
+```
+
+
+
+```{r}
+write.csv(df_top50_hora_coords_vehicle,
+          file = file.path(ruta_output, "denuncies_hora_coords_vehicle.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
 # Qui posa la multa
 
 ```{r}
 df_denuncies <- df_denuncies %>%
   mutate(
     Agent = case_when(
-      MITJA_IMPOSICIO %in% c("MOS") ~ "Mossos",
       MITJA_IMPOSICIO %in% c("MTO") ~ "Radar",
       MITJA_IMPOSICIO %in% c("PGU", "BSM", "AGU") ~ "Guardia Urbana",
       MITJA_IMPOSICIO %in% c("CC") ~ "Papereta",
@@ -309,27 +356,127 @@ df_denuncies <- df_denuncies %>%
     Agent != ""
   )
 
-df_denuncies
+```
+
+
+```{r}
+df_top50_hora_coords_agent <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%        # "08:00" → "08"
+  count(hora, lat, lon, Agent,
+        name = "count") %>%                           # multes per hora + coords + vehicle
+  group_by(hora, Agent) %>%              # filtrem dins de cada hora i vehicle
+  arrange(desc(count), .by_group = TRUE) %>%          # ordena per multes
+  mutate(rank = row_number(),
+         total = n(),
+         threshold = ceiling(total * 0.5)) %>%        # top 50%
+  filter(rank <= threshold) %>%                       # ens quedem només el top
+  select(-rank, -total, -threshold) %>%               # neteja
+  ungroup()
+
+
+```
+```{r}
+df_top50_hora_coords_agent
+dim(df_top50_hora_coords_agent)
 ```
 
 ```{r}
-unique(df_denuncies$Agent)
-table(df_denuncies$Agent)
-
-```
-```{r}
-df_denuncies <- df_denuncies[df_denuncies$Agent != "Mossos", ]
-```
-
-
-```{r output}
-write.csv(df_denuncies,
-          file = file.path(ruta_output, "dades_final.csv"), 
+write.csv(df_top50_hora_coords_agent,
+          file = file.path(ruta_output, "denuncies_hora_coords_agent.csv"),
           row.names = FALSE,
           quote = FALSE
           )
-
-df_denuncies
 ```
+
+# Totla per dia de la setmana i hora
+
+```{r}
+# Convertim Data_infraccio a Date
+df_denuncies <- df_denuncies %>%
+  mutate(
+    Data_Infraccio = as.Date(Data_Infraccio)
+  )
+
+# Afegim dia de la setmana i mes
+df_denuncies <- df_denuncies %>%
+  mutate(
+    dia_setmana = weekdays(Data_Infraccio, abbreviate = FALSE),
+    mes = months(Data_Infraccio, abbreviate = FALSE)
+  )
+
+
+```
+
+
+```{r}
+
+
+df_setmana_dia <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%        # "08:00" → "08"
+  
+  # Comptem multes per combinació d'hora + coordenades + grup de vehicle
+  count(dia_setmana, hora, name = "count")
+
+```
+
+```{r}
+write.csv(df_setmana_dia,
+          file = file.path(ruta_output, "denuncies_setm_dia.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
+# Per Grup_vehivels per dia i per hora
+
+```{r}
+df_setmana_dia_vehicle <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%        # "08:00" → "08"
+  
+  # Comptem multes per combinació d'hora + coordenades + grup de vehicle
+  count(dia_setmana, hora, Grup_Vehicle, name = "count")
+
+```
+
+
+
+```{r}
+df_setmana_dia_vehicle
+```
+
+```{r}
+write.csv(df_setmana_dia_vehicle,
+          file = file.path(ruta_output, "denuncies_setm_dia_vehicle.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
+
+# Per Agent per dia i per hora
+
+```{r}
+df_setmana_dia_agent <- df_denuncies %>%
+  mutate(hora = substr(franja_hora, 1, 2)) %>%        # "08:00" → "08"
+  
+  # Comptem multes per combinació d'hora + coordenades + grup de vehicle
+  count(dia_setmana, hora, Agent, name = "count")
+
+```
+
+
+
+```{r}
+df_setmana_dia_agent
+```
+
+```{r}
+write.csv(df_setmana_dia_agent,
+          file = file.path(ruta_output, "denuncies_setm_dia_agent.csv"),
+          row.names = FALSE,
+          quote = FALSE
+          )
+```
+
 
 

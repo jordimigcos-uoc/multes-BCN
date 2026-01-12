@@ -1,27 +1,6 @@
-import { updateActiveHour } from "./radialChart.js";
-import { updateRaceChart } from "./barChartRace.js";
-import { actualitzarOmbraHora } from "./lineChartGrid.js";
-
 let intervalId = null;
 let currentTime = 0;
 let speed = 1;
-
-// Actualitza el rellotge i les visualitzacions
-export function updateClockDisplay(seconds) {
-  const clock = document.getElementById("clock-time");
-  const hours = String(Math.floor(seconds / 3600)).padStart(2, "0");
-  const minutes = String((seconds % 3600) / 60).padStart(2, "0");
-  const hourString = `${hours}:00`;
-
-  clock.textContent = `${hours}:${minutes}`;
-  updateActiveHour(hourString);
-  updateRaceChart(hourString);
-
-  const hour = parseInt(hours);
-  actualitzarOmbraHora(hour);
-  if (window.updateStreamHour) window.updateStreamHour(hour);
-  if (window.updateMapaHora) window.updateMapaHora(hour);
-}
 
 // Avança el temps automàticament
 export function tick() {
@@ -34,6 +13,27 @@ export function tick() {
   slider.value = currentTime;
   updateClockDisplay(currentTime);
   updateSliderFill();
+
+  const hora = Math.floor(currentTime / 3600);
+  if (window.updateStreamHour) window.updateStreamHour(hora);
+  if (window.updateMapaHora) window.updateMapaHora(hora);
+}
+
+// Mostra l’hora al rellotge i actualitza gràfics
+export function updateClockDisplay(seconds) {
+  const clock = document.getElementById("clock-time");
+  const hours = String(Math.floor(seconds / 3600)).padStart(2, "0");
+  const minutes = String((seconds % 3600) / 60).padStart(2, "0");
+  const hourString = `${hours}:00`;
+
+  clock.textContent = `${hours}:${minutes}`;
+
+  if (window.updateActiveHour) window.updateActiveHour(hourString);
+  if (window.updateRaceChart) window.updateRaceChart(hourString);
+  if (window.actualitzarOmbraHora) window.actualitzarOmbraHora(parseInt(hours));  
+  if (window.updateStreamHour) window.updateStreamHour(parseInt(hours));
+  if (window.updateMapaHora) window.updateMapaHora(parseInt(hours));
+  if (window.updateLineChartHour) window.updateLineChartHour(parseInt(hours));
 }
 
 // Inicia l’animació
@@ -50,13 +50,6 @@ export function startTimeAnimation() {
 export function stopTimeAnimation() {
   clearInterval(intervalId);
   intervalId = null;
-}
-
-// Actualitza el fons del slider
-function updateSliderFill() {
-  const slider = document.getElementById("time-slider");
-  const percent = (slider.value / slider.max) * 100;
-  slider.style.background = `linear-gradient(to right, #69b3a2 0%, #69b3a2 ${percent}%, #ccc ${percent}%, #ccc 100%)`;
 }
 
 // Control de velocitat
@@ -82,4 +75,11 @@ export function setupManualSliderSync() {
     updateClockDisplay(value);
     updateSliderFill();
   });
+}
+
+// Actualitza el fons del slider
+function updateSliderFill() {
+  const slider = document.getElementById("time-slider");
+  const percent = (slider.value / slider.max) * 100;
+  slider.style.background = `linear-gradient(to right, #69b3a2 0%, #69b3a2 ${percent}%, #ccc ${percent}%, #ccc 100%)`;
 }

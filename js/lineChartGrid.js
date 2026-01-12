@@ -1,6 +1,6 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-export function LineChartGrid(containerSelector, data) {
+export function LineChartGrid(containerSelector, data) {  
   const container = d3.select(containerSelector);
   container.html(""); // Neteja contingut anterior
 
@@ -16,7 +16,7 @@ export function LineChartGrid(containerSelector, data) {
   const margin = { top: 60, right: 20, bottom: 30, left: 40 };
 
   // Agrupem les dades per vehicle
-  const dadesPerVehicle = d3.groups(data, d => d.vehicle);
+  const dadesPerVehicle = d3.groups(data, d => d.Grup_Vehicle);
 
   // Escala horària comuna
   const x = d3.scaleLinear()
@@ -30,19 +30,17 @@ export function LineChartGrid(containerSelector, data) {
     .style("gap", "20px");
 
   // Per a cada vehicle, crear un gràfic individual
-  dadesPerVehicle.forEach(([vehicle, valors]) => {
+  dadesPerVehicle.forEach(([Grup_Vehicle, valors]) => {
     const valorsValids = valors.filter(d =>
-      d.hora &&
-      d.count !== undefined &&
-      /^\d{1,2}:\d{2}$/.test(d.hora) &&
-      !isNaN(parseInt(d.hora)) &&
-      !isNaN(+d.count)
+      typeof d.Hora === "string" &&
+      /^\d{2}:\d{2}$/.test(d.Hora) &&
+      !isNaN(+d.total_multes)
     );
 
     // Ordenem per hora ascendent
     valorsValids.sort((a, b) => {
-      const ha = parseInt(a.hora.split(":")[0]);
-      const hb = parseInt(b.hora.split(":")[0]);
+      const ha = parseInt(a.Hora.split(":")[0]);
+      const hb = parseInt(b.Hora.split(":")[0]);
       return ha - hb;
     });
 
@@ -50,15 +48,16 @@ export function LineChartGrid(containerSelector, data) {
 
     // Escala Y específica per vehicle
     const y = d3.scaleLinear()
-      .domain([0, d3.max(valorsValids, d => +d.count)])
+      .domain([0, d3.max(valorsValids, d => +d.total_multes)])
       .nice()
       .range([height - margin.bottom, margin.top]);
 
     // Línia específica per vehicle
     const line = d3.line()
-      .x(d => x(parseInt(d.hora.split(":")[0])))
-      .y(d => y(+d.count))
+      .x(d => x(parseInt(d.Hora.split(":")[0])))
+      .y(d => y(+d.total_multes))
       .curve(d3.curveMonotoneX);
+
 
     const svg = container
       .append("svg")
@@ -68,14 +67,14 @@ export function LineChartGrid(containerSelector, data) {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet")
       .attr("role", "img")
-      .attr("title", vehicle);
+      .attr("title", Grup_Vehicle);
 
     // Títol del gràfic
     svg.append("text")
       .attr("x", margin.left)
       .attr("y", margin.top - 6)
       .attr("class", "linechart-title")
-      .text(vehicle);
+      .text(Grup_Vehicle);
 
     // Línia de dades
     svg.append("path")
@@ -108,6 +107,7 @@ export function LineChartGrid(containerSelector, data) {
       .attr("fill", "rgba(0,0,0,0.1)")
       .attr("x", x(0));
   });
+  return { updateHour: actualitzarOmbraHora };
 }
 
 // Funció per actualitzar la posició de l’ombra horària
@@ -128,4 +128,7 @@ export function actualitzarOmbraHora(hora) {
       .ease(d3.easeCubicOut)
       .attr("x", x(hora));
   });
+  
 }
+
+
