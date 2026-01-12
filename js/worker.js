@@ -1,5 +1,10 @@
 // Carrega D3 per poder fer servir d3.csvParse
-self.importScripts("https://d3js.org/d3.v7.min.js");
+try {
+  self.importScripts("https://d3js.org/d3.v7.min.js");
+} catch (e) {
+  self.postMessage({ error: "Error carregant D3: " + e.message });
+}
+
 
 self.onmessage = async function (e) {
   const msg = e.data;
