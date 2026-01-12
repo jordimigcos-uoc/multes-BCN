@@ -209,7 +209,14 @@ self.onmessage = async function (e) {
       // HeatmapWeek: agrupació per dia i hora
       // -----------------------------
       function getDiaSetmana(d) {
-        const [h, m] = d.franja_hora.split(":").map(Number);
+        //const [h, m] = d.franja_hora.split(":").map(Number);
+        if (d.franja_hora && d.franja_hora.includes(":")) {
+          const [h, m] = d.franja_hora.split(":").map(Number);
+          d.Minuts = h * 60 + m;
+        } else {
+          d.Minuts = null;
+        }
+
         const data = new Date(d.Data_Infraccio);
         const dia = data.getDay(); // 0 = Diumenge, 1 = Dilluns, ..., 6 = Dissabte
         return dia === 0 ? 6 : dia - 1;
