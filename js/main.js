@@ -18,7 +18,9 @@ document.getElementById("app").style.display = "none";
 
 // Crear el worker
 const worker = new Worker("js/worker.js");
-worker.postMessage("/dades_final.csv");
+//worker.postMessage("/dades_final.csv");
+worker.postMessage("carrega-multes");
+
 
 // Selectors globals (fora de condicions)
 const customTotal = document.getElementById("custom-total");
