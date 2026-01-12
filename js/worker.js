@@ -251,8 +251,7 @@ self.onmessage = async function (e) {
       });
 
     } catch (error) {
-      self.postMessage
-
+      self.postMessage({ error: error.message });
     }
   }
 };
