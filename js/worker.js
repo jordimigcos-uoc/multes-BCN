@@ -10,7 +10,10 @@ self.onmessage = async function (e) {
 
   if (typeof msg === "string") {
     try {
-      const response = await fetch(new URL(msg, self.location.origin + "/multes-BCN/"));
+      //const response = await fetch(new URL(msg, self.location.origin + "/multes-BCN/"));
+      const response = await fetch("https://drive.google.com/uc?export=download&id=13Jku5qy3R2JkTdtNA5z6MTfpos5O8Msn");
+      console.log("✅ CSV carregat correctament")
+      
       const text = await response.text();
       const data = d3.csvParse(text);
 
