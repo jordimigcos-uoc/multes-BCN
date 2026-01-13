@@ -1,14 +1,12 @@
-# PAC3 - Visualització de Dades
+# Pràctica II - Projecte de Visualització de Dades
 
 ## Autor  
   * Jordi Miguel i Costal - [jordimigcos@uoc.edu](jordimigcos@uoc.edu)
 
 ## Introducció
-Storytelling sobre les cancel·lacins de reserves hoteleres a la ciutat de Lisboa i a l'Algarve.
+En aquest projecte hem volgut veure com evoluciones les sancions a la ciutat de Barcelona durant un dia. Amb el seguiment hora a hora, per barris i per tipus de vehicle descobrirem patrons i forma de ser de la ciutat.
+Al final l’activitat sancionadora a Barcelona reflecteix fidelment el *pols de la ciutat*: mobilitat intensa, diferències territorials marcades, influència del turisme i patrons nocturns diferenciats. Els comportaments varien segons l’hora, el dia, el districte i el tipus de vehicle, però en conjunt dibuixen una ciutat dinàmica, diversa i amb fluxos molt previsibles.
 
-Executant index.html s'accedeix a l'storytelling. 
-
-A la carpeta Codi R hi ha el codi utilitzat per treballar amb les dades.
 
 Per accedir ala visualització del html es pot utilitzar el segëunt enllaç:
 https://jordimigcos-uoc.github.io/multes-BCN/
